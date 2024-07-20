@@ -1,0 +1,33 @@
+2023-05-26 17:20:44,072 : INFO : root : Loading config.
+2023-05-26 17:20:44,800 : INFO : ConfigProcessor : Config spec file cache created: /var/folders/ft/zbkj41rj5wb6vpt67k4g_t180000gn/T/config_spec.mpf_cache
+2023-05-26 17:20:44,800 : INFO : YamlMultifileConfigLoader : Machine config file #1: config.yaml
+2023-05-26 17:20:44,801 : WARNING : ConfigProcessor : Config file in cache changed: /Users/weijtmans/Dropbox/dev/pinball/config/config.yaml
+2023-05-26 17:20:44,801 : INFO : ConfigProcessor : Loading config from file /Users/weijtmans/opt/anaconda3/lib/python3.8/site-packages/mpf/mpfconfig.yaml.
+2023-05-26 17:20:44,926 : INFO : ConfigProcessor : Loading config: /Users/weijtmans/opt/anaconda3/lib/python3.8/site-packages/mpf/mpfconfig.yaml
+2023-05-26 17:20:44,927 : INFO : ConfigProcessor : Loading config from file /Users/weijtmans/Dropbox/dev/pinball/config/config.yaml.
+2023-05-26 17:20:44,946 : INFO : ConfigProcessor : Loading config: /Users/weijtmans/Dropbox/dev/pinball/config/config.yaml
+2023-05-26 17:20:44,947 : INFO : ConfigProcessor : Config file cache created: /var/folders/ft/zbkj41rj5wb6vpt67k4g_t180000gn/T/5990d3b039773aa86c29d89c33f7fe2d.mpf_cache
+2023-05-26 17:20:45,060 : INFO : ConfigProcessor : Loading config from cache: /var/folders/ft/zbkj41rj5wb6vpt67k4g_t180000gn/T/e6f181099026fef6d8fced6e7d189039.mpf_cache
+2023-05-26 17:20:45,061 : INFO : ConfigProcessor : Loading config from cache: /var/folders/ft/zbkj41rj5wb6vpt67k4g_t180000gn/T/b34aaaef8e306d9776092af8bb9baa5f.mpf_cache
+2023-05-26 17:20:45,062 : INFO : Machine : Mission Pinball Framework Core Engine v0.56.1.dev7
+2023-05-26 17:20:45,062 : INFO : Machine : Command line arguments: {'no_load_cache': False, 'create_config_cache': True, 'bcp': True, 'configfile': ['config.yaml'], 'force_assets_load': False, 'jsonlogging': False, 'logfile': 'logs/2023-05-26-17-20-44-mpf-MBP-van-Elgar.log', 'pause': False, 'production': False, 'text_ui': True, 'loglevel': 15, 'consoleloglevel': 20, 'force_platform': None, 'syslog_address': None, 'mc_file_name': None, 'no_sound': False}
+2023-05-26 17:20:45,062 : INFO : Machine : MPF path: /Users/weijtmans/opt/anaconda3/lib/python3.8/site-packages/mpf
+2023-05-26 17:20:45,063 : INFO : Machine : Machine path: /Users/weijtmans/Dropbox/dev/pinball
+2023-05-26 17:20:45,063 : INFO : Machine : Platform: darwin
+2023-05-26 17:20:45,063 : INFO : Machine : Python executable location: /Users/weijtmans/opt/anaconda3/bin/python
+2023-05-26 17:20:45,063 : INFO : Machine : Python version: 3.8.8 (64-bit)
+2023-05-26 17:20:45,074 : INFO : Machine : Initialise MPF.
+2023-05-26 17:20:45,199 : INFO : EventManager : Event: ======'machine_var_credits_string'====== Args={'value': 'FREE PLAY', 'prev_value': None, 'change': True}
+2023-05-26 17:20:45,267 : INFO : EventManager : Event: ======'machine_var_master_volume'====== Args={'value': 0.5, 'prev_value': None, 'change': True}
+2023-05-26 17:20:45,267 : INFO : EventManager : Event: ======'machine_var_mpf_version'====== Args={'value': 'MPF v0.56.1.dev7', 'prev_value': None, 'change': True}
+2023-05-26 17:20:45,267 : INFO : EventManager : Event: ======'machine_var_mpf_extended_version'====== Args={'value': 'MPF v0.56.1.dev7, Config version:5, Show version: 5, BCP version:1.1', 'prev_value': None, 'change': True}
+2023-05-26 17:20:45,267 : INFO : EventManager : Event: ======'machine_var_python_version'====== Args={'value': '3.8.8', 'prev_value': None, 'change': True}
+2023-05-26 17:20:45,281 : INFO : EventManager : Event: ======'machine_var_platform'====== Args={'value': 'macOS-10.16-x86_64-i386-64bit', 'prev_value': None, 'change': True}
+2023-05-26 17:20:45,282 : INFO : EventManager : Event: ======'machine_var_platform_system'====== Args={'value': 'Darwin', 'prev_value': None, 'change': True}
+2023-05-26 17:20:45,282 : INFO : EventManager : Event: ======'machine_var_platform_release'====== Args={'value': '21.6.0', 'prev_value': None, 'change': True}
+2023-05-26 17:20:45,282 : INFO : EventManager : Event: ======'machine_var_platform_version'====== Args={'value': 'Darwin Kernel Version 21.6.0: Mon Aug 22 20:17:10 PDT 2022; root:xnu-8020.140.49~2/RELEASE_X86_64', 'prev_value': None, 'change': True}
+2023-05-26 17:20:45,282 : INFO : EventManager : Event: ======'machine_var_platform_machine'====== Args={'value': 'x86_64', 'prev_value': None, 'change': True}
+2023-05-26 17:20:45,282 : INFO : EventManager : Event: ======'init_phase_1'====== Args={}
+2023-05-26 17:20:45,303 : INFO : EventManager : Event: ======'init_phase_2'====== Args={}
+2023-05-26 17:20:45,306 : INFO : EventManager : Event: ======'bcp_connection_attempt'====== Args={'name': 'local_display', 'host': 'localhost', 'port': 5050}
+2023-05-26 17:20:45,308 : INFO : BCPClientSocket : Connecting BCP to 'local_display' at localhost:5050...

@@ -1,0 +1,49 @@
+device_size: 0.06
+flipper: {}
+switch:
+  s_flipper_left:
+    rotation: 120
+    shape: RECTANGLE
+    size: 0.1
+    x: 0.3476702508960574
+    y: 0.8286390440720051
+  s_flipper_right:
+    rotation: 240
+    shape: RECTANGLE
+    size: 0.1
+    x: 0.5931899641577062
+    y: 0.8277767765963838
+  s_slingshot_left:
+    rotation: 330
+    shape: RECTANGLE
+    size: 0.14
+    x: 0.21505376344086025
+    y: 0.7493104363148516
+  s_slingshot_right:
+    rotation: 30
+    shape: RECTANGLE
+    size: 0.14
+    x: 0.7222222222222223
+    y: 0.754484041168579
+  s_start:
+    shape: CIRCLE
+    size: 0.1
+    x: 0.20609318996415774
+    y: 0.9260752688172044
+  s_trough_1:
+    size: 0.07
+    x: 0.6523297491039427
+    y: 0.898482709597325
+  s_trough_2:
+    size: 0.07
+    x: 0.8100358422939069
+    y: 0.8605429406699907
+  s_trough_3:
+    size: 0.07
+    x: 0.7293906810035843
+    y: 0.8786505576580366
+  s_trough_loader:
+    shape: CIRCLE
+    size: 0.06
+    x: 0.4731182795698925
+    y: 0.9053808494022949

@@ -1,0 +1,85 @@
+2023-05-26 16:58:48,247 : INFO : root : Loading config.
+2023-05-26 16:58:48,572 : INFO : ConfigProcessor : Config spec file cache created: /var/folders/ft/zbkj41rj5wb6vpt67k4g_t180000gn/T/config_spec.mpf_cache
+2023-05-26 16:58:48,573 : INFO : YamlMultifileConfigLoader : Machine config file #1: config.yaml
+2023-05-26 16:58:48,573 : WARNING : ConfigProcessor : Config file in cache changed: /Users/weijtmans/Dropbox/dev/pinball/config/config.yaml
+2023-05-26 16:58:48,573 : INFO : ConfigProcessor : Loading config from file /Users/weijtmans/opt/anaconda3/lib/python3.8/site-packages/mpf/mpfconfig.yaml.
+2023-05-26 16:58:48,636 : INFO : ConfigProcessor : Loading config: /Users/weijtmans/opt/anaconda3/lib/python3.8/site-packages/mpf/mpfconfig.yaml
+2023-05-26 16:58:48,637 : INFO : ConfigProcessor : Loading config from file /Users/weijtmans/Dropbox/dev/pinball/config/config.yaml.
+2023-05-26 16:58:48,641 : INFO : ConfigProcessor : Loading config: /Users/weijtmans/Dropbox/dev/pinball/config/config.yaml
+2023-05-26 16:58:48,644 : INFO : ConfigProcessor : Config file cache created: /var/folders/ft/zbkj41rj5wb6vpt67k4g_t180000gn/T/5990d3b039773aa86c29d89c33f7fe2d.mpf_cache
+2023-05-26 16:58:48,720 : INFO : ConfigProcessor : Loading config from cache: /var/folders/ft/zbkj41rj5wb6vpt67k4g_t180000gn/T/e6f181099026fef6d8fced6e7d189039.mpf_cache
+2023-05-26 16:58:48,721 : INFO : ConfigProcessor : Loading config from cache: /var/folders/ft/zbkj41rj5wb6vpt67k4g_t180000gn/T/b34aaaef8e306d9776092af8bb9baa5f.mpf_cache
+2023-05-26 16:58:48,722 : INFO : Machine : Mission Pinball Framework Core Engine v0.56.1.dev7
+2023-05-26 16:58:48,722 : INFO : Machine : Command line arguments: {'no_load_cache': False, 'create_config_cache': True, 'bcp': False, 'configfile': ['config.yaml'], 'force_assets_load': False, 'jsonlogging': False, 'logfile': 'logs/2023-05-26-16-58-48-mpf-MBP-van-Elgar.log', 'pause': False, 'production': False, 'text_ui': False, 'loglevel': 15, 'consoleloglevel': 20, 'force_platform': None, 'syslog_address': None, 'mc_file_name': None, 'no_sound': False}
+2023-05-26 16:58:48,722 : INFO : Machine : MPF path: /Users/weijtmans/opt/anaconda3/lib/python3.8/site-packages/mpf
+2023-05-26 16:58:48,722 : INFO : Machine : Machine path: /Users/weijtmans/Dropbox/dev/pinball
+2023-05-26 16:58:48,722 : INFO : Machine : Platform: darwin
+2023-05-26 16:58:48,722 : INFO : Machine : Python executable location: /Users/weijtmans/opt/anaconda3/bin/python
+2023-05-26 16:58:48,722 : INFO : Machine : Python version: 3.8.8 (64-bit)
+2023-05-26 16:58:48,734 : INFO : Machine : Initialise MPF.
+2023-05-26 16:58:48,859 : INFO : EventManager : Event: ======'machine_var_credits_string'====== Args={'value': 'FREE PLAY', 'prev_value': None, 'change': True}
+2023-05-26 16:58:48,903 : INFO : EventManager : Event: ======'machine_var_master_volume'====== Args={'value': 0.5, 'prev_value': None, 'change': True}
+2023-05-26 16:58:48,903 : INFO : EventManager : Event: ======'machine_var_mpf_version'====== Args={'value': 'MPF v0.56.1.dev7', 'prev_value': None, 'change': True}
+2023-05-26 16:58:48,903 : INFO : EventManager : Event: ======'machine_var_mpf_extended_version'====== Args={'value': 'MPF v0.56.1.dev7, Config version:5, Show version: 5, BCP version:1.1', 'prev_value': None, 'change': True}
+2023-05-26 16:58:48,903 : INFO : EventManager : Event: ======'machine_var_python_version'====== Args={'value': '3.8.8', 'prev_value': None, 'change': True}
+2023-05-26 16:58:48,937 : INFO : EventManager : Event: ======'machine_var_platform'====== Args={'value': 'macOS-10.16-x86_64-i386-64bit', 'prev_value': None, 'change': True}
+2023-05-26 16:58:48,938 : INFO : EventManager : Event: ======'machine_var_platform_system'====== Args={'value': 'Darwin', 'prev_value': None, 'change': True}
+2023-05-26 16:58:48,938 : INFO : EventManager : Event: ======'machine_var_platform_release'====== Args={'value': '21.6.0', 'prev_value': None, 'change': True}
+2023-05-26 16:58:48,938 : INFO : EventManager : Event: ======'machine_var_platform_version'====== Args={'value': 'Darwin Kernel Version 21.6.0: Mon Aug 22 20:17:10 PDT 2022; root:xnu-8020.140.49~2/RELEASE_X86_64', 'prev_value': None, 'change': True}
+2023-05-26 16:58:48,938 : INFO : EventManager : Event: ======'machine_var_platform_machine'====== Args={'value': 'x86_64', 'prev_value': None, 'change': True}
+2023-05-26 16:58:48,940 : INFO : EventManager : Event: ======'init_phase_1'====== Args={}
+2023-05-26 16:58:48,954 : ERROR : asyncio : Exception in callback functools.partial(<function EventManager._async_handler_done at 0x7f92c0a749d0>, <QueuedEvent>)
+handle: <Handle functools.partial(<function EventManager._async_handler_done at 0x7f92c0a749d0>, <QueuedEvent>)>
+Traceback (most recent call last):
+  File "uvloop/cbhandles.pyx", line 63, in uvloop.loop.Handle._run
+  File "/Users/weijtmans/opt/anaconda3/lib/python3.8/site-packages/mpf/core/events.py", line 127, in _async_handler_done
+    future.result()
+  File "/Users/weijtmans/opt/anaconda3/lib/python3.8/site-packages/mpf/core/device_manager.py", line 89, in _load_device_modules
+    self.load_devices_config(validate=True)
+  File "/Users/weijtmans/opt/anaconda3/lib/python3.8/site-packages/mpf/core/device_manager.py", line 147, in load_devices_config
+    config[device_name] = collection[device_name].validate_and_parse_config(config[device_name], False)
+  File "/Users/weijtmans/opt/anaconda3/lib/python3.8/site-packages/mpf/core/device.py", line 108, in validate_and_parse_config
+    self.machine.config_validator.validate_config(
+  File "/Users/weijtmans/opt/anaconda3/lib/python3.8/site-packages/mpf/core/config_validator.py", line 164, in validate_config
+    return self._validate_config(config_spec, source, base_spec=base_spec, add_missing_keys=add_missing_keys,
+  File "/Users/weijtmans/opt/anaconda3/lib/python3.8/site-packages/mpf/core/config_validator.py", line 215, in _validate_config
+    processed_config[k] = self.validate_config_item(
+  File "/Users/weijtmans/opt/anaconda3/lib/python3.8/site-packages/mpf/core/config_validator.py", line 244, in validate_config_item
+    return self.validate_item(item, validation, validation_failure_info)
+  File "/Users/weijtmans/opt/anaconda3/lib/python3.8/site-packages/mpf/core/config_validator.py", line 696, in validate_item
+    return self.validator_list[validator](item, validation_failure_info=validation_failure_info, param=param)
+  File "/Users/weijtmans/opt/anaconda3/lib/python3.8/site-packages/mpf/core/config_validator.py", line 407, in _validate_type_machine
+    return self.validation_error(item, validation_failure_info,
+  File "/Users/weijtmans/opt/anaconda3/lib/python3.8/site-packages/mpf/core/config_validator.py", line 713, in validation_error
+    raise ConfigFileError("Config validation error: Entry {} = \"{}\" is not valid. {}".format(
+mpf.exceptions.config_file_error.ConfigFileError: Config File Error in ConfigValidator: Config validation error: Entry flippers:f_flipper_left:playfield = "playfield" is not valid. Device "playfield" not found in "playfields:" section in your config. Error Code: CFE-ConfigValidator-6 (https://docs.missionpinball.org/en/dev/logs/CFE-ConfigValidator-6.html)
+2023-05-26 16:58:48,958 : INFO : Machine : Starting the main run loop.
+2023-05-26 16:58:48,959 : INFO : Machine : Shutting down...
+2023-05-26 16:58:48,959 : INFO : EventManager : Event: ======'shutdown'====== Args={}
+2023-05-26 16:58:49,961 : ERROR : Machine : Runtime Exception
+Traceback (most recent call last):
+  File "/Users/weijtmans/opt/anaconda3/lib/python3.8/site-packages/mpf/core/machine.py", line 797, in _run_loop
+    raise self._exception['exception']
+  File "uvloop/cbhandles.pyx", line 63, in uvloop.loop.Handle._run
+  File "/Users/weijtmans/opt/anaconda3/lib/python3.8/site-packages/mpf/core/events.py", line 127, in _async_handler_done
+    future.result()
+  File "/Users/weijtmans/opt/anaconda3/lib/python3.8/site-packages/mpf/core/device_manager.py", line 89, in _load_device_modules
+    self.load_devices_config(validate=True)
+  File "/Users/weijtmans/opt/anaconda3/lib/python3.8/site-packages/mpf/core/device_manager.py", line 147, in load_devices_config
+    config[device_name] = collection[device_name].validate_and_parse_config(config[device_name], False)
+  File "/Users/weijtmans/opt/anaconda3/lib/python3.8/site-packages/mpf/core/device.py", line 108, in validate_and_parse_config
+    self.machine.config_validator.validate_config(
+  File "/Users/weijtmans/opt/anaconda3/lib/python3.8/site-packages/mpf/core/config_validator.py", line 164, in validate_config
+    return self._validate_config(config_spec, source, base_spec=base_spec, add_missing_keys=add_missing_keys,
+  File "/Users/weijtmans/opt/anaconda3/lib/python3.8/site-packages/mpf/core/config_validator.py", line 215, in _validate_config
+    processed_config[k] = self.validate_config_item(
+  File "/Users/weijtmans/opt/anaconda3/lib/python3.8/site-packages/mpf/core/config_validator.py", line 244, in validate_config_item
+    return self.validate_item(item, validation, validation_failure_info)
+  File "/Users/weijtmans/opt/anaconda3/lib/python3.8/site-packages/mpf/core/config_validator.py", line 696, in validate_item
+    return self.validator_list[validator](item, validation_failure_info=validation_failure_info, param=param)
+  File "/Users/weijtmans/opt/anaconda3/lib/python3.8/site-packages/mpf/core/config_validator.py", line 407, in _validate_type_machine
+    return self.validation_error(item, validation_failure_info,
+  File "/Users/weijtmans/opt/anaconda3/lib/python3.8/site-packages/mpf/core/config_validator.py", line 713, in validation_error
+    raise ConfigFileError("Config validation error: Entry {} = \"{}\" is not valid. {}".format(
+mpf.exceptions.config_file_error.ConfigFileError: Config File Error in ConfigValidator: Config validation error: Entry flippers:f_flipper_left:playfield = "playfield" is not valid. Device "playfield" not found in "playfields:" section in your config. Error Code: CFE-ConfigValidator-6 (https://docs.missionpinball.org/en/dev/logs/CFE-ConfigValidator-6.html)
+2023-05-26 16:59:48,550 : INFO : root : MPF run loop ended.

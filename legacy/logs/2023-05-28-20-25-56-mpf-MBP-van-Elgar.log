@@ -1,0 +1,84 @@
+2023-05-28 20:25:56,093 : INFO : root : Loading config.
+2023-05-28 20:25:56,094 : DEBUG : YAML File Interface : Loading file: /Users/weijtmans/opt/anaconda3/lib/python3.8/site-packages/mpf/config_spec.yaml
+2023-05-28 20:25:56,412 : INFO : ConfigProcessor : Config spec file cache created: /var/folders/ft/zbkj41rj5wb6vpt67k4g_t180000gn/T/config_spec.mpf_cache
+2023-05-28 20:25:56,412 : INFO : YamlMultifileConfigLoader : Machine config file #1: config.yaml
+2023-05-28 20:25:56,413 : WARNING : ConfigProcessor : Config file in cache changed: /Users/weijtmans/Dropbox/dev/pinball/config/config.yaml
+2023-05-28 20:25:56,413 : INFO : ConfigProcessor : Loading config from file /Users/weijtmans/opt/anaconda3/lib/python3.8/site-packages/mpf/mpfconfig.yaml.
+2023-05-28 20:25:56,413 : DEBUG : YAML File Interface : Loading file: /Users/weijtmans/opt/anaconda3/lib/python3.8/site-packages/mpf/mpfconfig.yaml
+2023-05-28 20:25:56,486 : INFO : ConfigProcessor : Loading config: /Users/weijtmans/opt/anaconda3/lib/python3.8/site-packages/mpf/mpfconfig.yaml
+2023-05-28 20:25:56,487 : INFO : ConfigProcessor : Loading config from file /Users/weijtmans/Dropbox/dev/pinball/config/config.yaml.
+2023-05-28 20:25:56,487 : DEBUG : YAML File Interface : Loading file: /Users/weijtmans/Dropbox/dev/pinball/config/config.yaml
+2023-05-28 20:25:56,506 : INFO : ConfigProcessor : Loading config: /Users/weijtmans/Dropbox/dev/pinball/config/config.yaml
+2023-05-28 20:25:56,512 : INFO : ConfigProcessor : Config file cache created: /var/folders/ft/zbkj41rj5wb6vpt67k4g_t180000gn/T/5990d3b039773aa86c29d89c33f7fe2d.mpf_cache
+2023-05-28 20:25:56,568 : DEBUG : YamlMultifileConfigLoader : Loading mode attract from /Users/weijtmans/opt/anaconda3/lib/python3.8/site-packages/mpf/modes/attract/config/attract.yaml
+2023-05-28 20:25:56,569 : INFO : ConfigProcessor : Loading config from cache: /var/folders/ft/zbkj41rj5wb6vpt67k4g_t180000gn/T/e6f181099026fef6d8fced6e7d189039.mpf_cache
+2023-05-28 20:25:56,569 : DEBUG : YamlMultifileConfigLoader : Loading mode game from /Users/weijtmans/opt/anaconda3/lib/python3.8/site-packages/mpf/modes/game/config/game.yaml
+2023-05-28 20:25:56,569 : INFO : ConfigProcessor : Loading config from cache: /var/folders/ft/zbkj41rj5wb6vpt67k4g_t180000gn/T/b34aaaef8e306d9776092af8bb9baa5f.mpf_cache
+2023-05-28 20:25:56,570 : INFO : Machine : Mission Pinball Framework Core Engine v0.56.1.dev7
+2023-05-28 20:25:56,570 : INFO : Machine : Command line arguments: {'no_load_cache': False, 'create_config_cache': True, 'bcp': False, 'configfile': ['config.yaml'], 'force_assets_load': False, 'jsonlogging': False, 'logfile': 'logs/2023-05-28-20-25-56-mpf-MBP-van-Elgar.log', 'pause': False, 'production': False, 'text_ui': False, 'loglevel': 10, 'consoleloglevel': 20, 'force_platform': None, 'syslog_address': None, 'mc_file_name': None, 'no_sound': False}
+2023-05-28 20:25:56,570 : INFO : Machine : MPF path: /Users/weijtmans/opt/anaconda3/lib/python3.8/site-packages/mpf
+2023-05-28 20:25:56,570 : INFO : Machine : Machine path: /Users/weijtmans/Dropbox/dev/pinball
+2023-05-28 20:25:56,570 : INFO : Machine : Platform: darwin
+2023-05-28 20:25:56,570 : INFO : Machine : Python executable location: /Users/weijtmans/opt/anaconda3/bin/python
+2023-05-28 20:25:56,570 : INFO : Machine : Python version: 3.8.8 (64-bit)
+2023-05-28 20:25:56,580 : INFO : Machine : Initialise MPF.
+2023-05-28 20:25:56,647 : INFO : EventManager : Event: ======'machine_var_credits_string'====== Args={'value': 'FREE PLAY', 'prev_value': None, 'change': True}
+2023-05-28 20:25:56,680 : INFO : EventManager : Event: ======'machine_var_master_volume'====== Args={'value': 0.5, 'prev_value': None, 'change': True}
+2023-05-28 20:25:56,680 : INFO : EventManager : Event: ======'machine_var_mpf_version'====== Args={'value': 'MPF v0.56.1.dev7', 'prev_value': None, 'change': True}
+2023-05-28 20:25:56,680 : INFO : EventManager : Event: ======'machine_var_mpf_extended_version'====== Args={'value': 'MPF v0.56.1.dev7, Config version:5, Show version: 5, BCP version:1.1', 'prev_value': None, 'change': True}
+2023-05-28 20:25:56,680 : INFO : EventManager : Event: ======'machine_var_python_version'====== Args={'value': '3.8.8', 'prev_value': None, 'change': True}
+2023-05-28 20:25:56,688 : INFO : EventManager : Event: ======'machine_var_platform'====== Args={'value': 'macOS-10.16-x86_64-i386-64bit', 'prev_value': None, 'change': True}
+2023-05-28 20:25:56,689 : INFO : EventManager : Event: ======'machine_var_platform_system'====== Args={'value': 'Darwin', 'prev_value': None, 'change': True}
+2023-05-28 20:25:56,689 : INFO : EventManager : Event: ======'machine_var_platform_release'====== Args={'value': '21.6.0', 'prev_value': None, 'change': True}
+2023-05-28 20:25:56,689 : INFO : EventManager : Event: ======'machine_var_platform_version'====== Args={'value': 'Darwin Kernel Version 21.6.0: Mon Aug 22 20:17:10 PDT 2022; root:xnu-8020.140.49~2/RELEASE_X86_64', 'prev_value': None, 'change': True}
+2023-05-28 20:25:56,689 : INFO : EventManager : Event: ======'machine_var_platform_machine'====== Args={'value': 'x86_64', 'prev_value': None, 'change': True}
+2023-05-28 20:25:56,689 : INFO : EventManager : Event: ======'init_phase_1'====== Args={}
+2023-05-28 20:25:56,694 : DEBUG : ModeController : Loaded mode game
+2023-05-28 20:25:56,696 : DEBUG : ModeController : Loaded mode attract
+2023-05-28 20:25:56,702 : INFO : EventManager : Event: ======'init_phase_2'====== Args={}
+2023-05-28 20:25:56,702 : INFO : SwitchController : Found active switch: ('2', <Platform.SmartVirtual>) <switch.s_trough_1>
+2023-05-28 20:25:56,702 : INFO : SwitchController : Found active switch: ('3', <Platform.SmartVirtual>) <switch.s_trough_2>
+2023-05-28 20:25:56,703 : INFO : SwitchController : Found active switch: ('4', <Platform.SmartVirtual>) <switch.s_trough_3>
+2023-05-28 20:25:56,703 : INFO : SwitchController : Found active switch: ('5', <Platform.SmartVirtual>) <switch.s_trough_4>
+2023-05-28 20:25:56,703 : INFO : SwitchController : Found active switch: ('6', <Platform.SmartVirtual>) <switch.s_trough_5>
+2023-05-28 20:25:56,703 : INFO : SwitchController : Found active switch: ('7', <Platform.SmartVirtual>) <switch.s_trough_6>
+2023-05-28 20:25:56,704 : INFO : ball_device.bd_trough : BCH: Initial count: 6
+2023-05-28 20:25:56,705 : INFO : ball_device.bd_trough : State: idle
+2023-05-28 20:25:56,705 : INFO : ball_device.bd_plunger : BCH: Initial count: 0
+2023-05-28 20:25:56,706 : INFO : ball_device.bd_plunger : State: idle
+2023-05-28 20:25:56,708 : DEBUG : Machine : "info_lights:" section not found in machine configuration, so the Info Lights plugin will not be used.
+2023-05-28 20:25:56,709 : DEBUG : Machine : "switch_player:" section not found in machine configuration, so the Switch Playerplugin will not be used.
+2023-05-28 20:25:56,711 : DEBUG : twitch_client : "twitch_client:" section not found in machine configuration, so the Twitch Clientplugin will not be used.
+2023-05-28 20:25:56,711 : DEBUG : virtual_segment_display_connector : "virtual_segment_display_connector:" section not found in machine configuration, so the Virtual Segment Display Connector plugin will not be used.
+2023-05-28 20:25:56,711 : INFO : EventManager : Event: ======'init_phase_3'====== Args={}
+2023-05-28 20:25:56,714 : INFO : EventManager : Event: ======'init_phase_4'====== Args={}
+2023-05-28 20:25:56,714 : INFO : BallController : Initial balls found: 6
+2023-05-28 20:25:56,717 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_flipper_left'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2023-05-28 20:25:56,717 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_flipper_right'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2023-05-28 20:25:56,717 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_trough_1'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2023-05-28 20:25:56,717 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_trough_2'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2023-05-28 20:25:56,717 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_trough_3'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2023-05-28 20:25:56,717 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_trough_4'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2023-05-28 20:25:56,717 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_trough_5'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2023-05-28 20:25:56,717 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_trough_6'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2023-05-28 20:25:56,717 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_trough_jam'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2023-05-28 20:25:56,717 : INFO : EventManager : Event: ======'machine_var_audits_switches_s_plunger'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2023-05-28 20:25:56,717 : INFO : EventManager : Event: ======'machine_var_audits_events_game_started'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2023-05-28 20:25:56,717 : INFO : EventManager : Event: ======'machine_var_audits_events_game_ended'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2023-05-28 20:25:56,717 : INFO : EventManager : Event: ======'machine_var_audits_player_score'====== Args={'value': {'top': [], 'average': 0, 'total': 0}, 'prev_value': None, 'change': True}
+2023-05-28 20:25:56,719 : INFO : EventManager : Event: ======'init_phase_5'====== Args={}
+2023-05-28 20:25:56,720 : INFO : EventManager : Event: ======'init_done'====== Args={}
+2023-05-28 20:25:56,720 : INFO : EventManager : Event: ======'machine_reset_phase_1'====== Args={}
+2023-05-28 20:25:56,721 : INFO : EventManager : Event: ======'machine_reset_phase_2'====== Args={}
+2023-05-28 20:25:56,721 : INFO : EventManager : Event: ======'machine_reset_phase_3'====== Args={}
+2023-05-28 20:25:56,721 : INFO : EventManager : Event: ======'reset_complete'====== Args={}
+2023-05-28 20:25:56,722 : INFO : EventManager : Event: ======'mode_attract_will_start'====== Args={}
+2023-05-28 20:25:56,722 : INFO : EventManager : Event: ======'mode_attract_starting'====== Args={}
+2023-05-28 20:25:56,722 : INFO : Mode.attract : Started. Priority: 10
+2023-05-28 20:25:56,722 : INFO : EventManager : Event: ======'modes_active_modes_changed'====== Args={}
+2023-05-28 20:25:56,722 : INFO : EventManager : Event: ======'mode_attract_started'====== Args={}
+2023-05-28 20:25:56,723 : INFO : EventManager : Event: ======'collecting_balls_complete'====== Args={}
+2023-05-28 20:25:56,724 : INFO : Machine : Starting the main run loop.
+2023-05-28 20:26:14,205 : INFO : Machine : Shutting down...
+2023-05-28 20:26:14,205 : INFO : EventManager : Event: ======'shutdown'====== Args={}
+2023-05-28 20:26:14,207 : INFO : root : MPF run loop ended.

@@ -1,0 +1,46 @@
+events:
+  game_ended: 17
+  game_started: 80
+player:
+  score:
+    average: 434.70588235294116
+    top:
+    - 2100
+    - 1700
+    - 900
+    - 700
+    - 600
+    - 600
+    - 550
+    - 190
+    - 50
+    - 0
+    total: 17
+switches:
+  s_drain: 2
+  s_drop_target_bank_left_1: 15
+  s_drop_target_bank_left_2: 14
+  s_drop_target_bank_left_3: 14
+  s_drop_target_bank_right_1: 16
+  s_drop_target_bank_right_2: 14
+  s_drop_target_bank_right_3: 7
+  s_drop_target_bank_right_4: 8
+  s_drop_target_bank_right_5: 7
+  s_flipper_left: 286
+  s_flipper_left_eos: 43
+  s_flipper_right: 351
+  s_flipper_right_eos: 71
+  s_kickout_hole_top: 14
+  s_launch: 54
+  s_pop_bumper_1: 95
+  s_pop_bumper_2: 21
+  s_pop_bumper_3: 56
+  s_pop_bumper_4: 42
+  s_pop_bumper_5: 33
+  s_slingshot_left: 114
+  s_slingshot_right: 124
+  s_start: 56
+  s_trough_1: 477
+  s_trough_2: 49
+  s_trough_3: 44
+  s_trough_loader: 242

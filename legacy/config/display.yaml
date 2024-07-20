@@ -1,0 +1,9 @@
+#config_version=5
+
+displays:
+  window:
+    default: true
+
+window:
+  title: "Tiki Retreat"
+  exit_on_escape: true
