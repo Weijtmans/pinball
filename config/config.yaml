@@ -1,0 +1,119 @@
+#config_version=6
+
+hardware:
+  platform: fast 
+
+fast:
+  net:
+    controller: neuron
+    debug: true
+    #port: /dev/tty.usbmodem1101
+    io_loop:
+      "1616":
+        model: FP-I/O-1616
+        order: 1
+      "3208":
+        model: FP-I/O-3208
+        order: 2
+      cab:
+        model: FP-I/O-0024
+        order: 3
+    watchdog: 1s
+
+  exp:
+    boards: 
+      playfield:
+        model: FP-EXP-0071
+        led_hz: 30
+        led_fade_time: 100ms
+
+playfields:
+  playfield:
+    tags: default
+    default_source_device: bd_plunger
+
+switches:
+  s_start:
+    number: cab-2
+    tags: start
+  s_launch_button:
+    number: cab-3
+  # Flippers
+  s_left_flipper:
+    number: cab-0
+    tags: left_flipper
+  s_right_flipper:
+    number: cab-1
+    tags: right_flipper
+  # Trough
+  s_trough1:
+    number: 3208-0
+    type: NC
+  s_trough2:
+    number: 3208-1
+    type: NC
+  s_trough_jam:
+    number: 3208-6
+    type: NC
+  # Plunger
+  s_plunger_lane:
+    number: 3208-7
+  s_plunger_lane_exit:
+    number: 1616-6
+    type: NO
+
+coils:
+  # Flipper
+  c_flipper_left_main:
+    number: 3208-0
+  c_flipper_left_hold:
+    number: 3208-1
+    allow_enable: true
+  c_flipper_right_main:
+    number: 3208-2
+  c_flipper_right_hold:
+    number: 3208-3
+    allow_enable: true
+  # Trough
+  c_trough_eject:
+    number: 3208-6
+    default_pulse_ms: 5
+  # Plunger
+  c_plunger:
+    number: 3208-7
+    default_pulse_ms: 15
+
+flippers:
+  s_left_flipper:
+    main_coil: c_flipper_left_main
+    hold_coil: c_flipper_left_hold
+    activation_switch: s_left_flipper
+    enable_events: machine_reset_phase_3
+  s_right_flipper:
+    main_coil: c_flipper_right_main
+    hold_coil: c_flipper_right_hold
+    activation_switch: s_right_flipper
+    enable_events: machine_reset_phase_3
+
+ball_devices:
+  bd_trough:
+    ball_switches: s_trough1, s_trough2, s_trough_jam
+    eject_coil: c_trough_eject
+    tags: trough, home, drain
+    jam_switch: s_trough_jam
+    eject_coil_jam_pulse: 15ms
+    eject_targets: bd_plunger
+    eject_timeouts: 3s
+  bd_plunger:
+    ball_switches: s_plunger_lane
+    eject_coil: c_plunger
+    player_controlled_eject_event: s_launch_button_active
+    confirm_eject_type: switch
+    confirm_eject_switch: s_plunger_lane_exit
+    eject_timeouts: 3s
+
+keyboard:
+  "q":
+    switch: s_flipper_left
+  "w":
+    switch: s_flipper_right

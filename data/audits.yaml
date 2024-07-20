@@ -1,0 +1,23 @@
+events:
+  game_ended: 3
+  game_started: 7
+missing_switches:
+  s_right_flipper: 5
+player:
+  score:
+    average: 0
+    top:
+    - 0
+    - 0
+    - 0
+    total: 3
+switches:
+  s_launch_button: 25
+  s_left_flipper: 104
+  s_plunger_lane: 25
+  s_plunger_lane_exit: 18
+  s_right_flipper: 38
+  s_start: 16
+  s_trough1: 23
+  s_trough2: 17
+  s_trough_jam: 18
