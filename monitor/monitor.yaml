@@ -1,0 +1,33 @@
+device_size: 0.03
+light:
+  l_playfield_arrow_middle1:
+    x: 0.4526124427114526
+    y: 0.7306949806949807
+  l_playfield_arrow_middle10:
+    x: 0.45060973278795063
+    y: 0.5222007722007722
+  l_playfield_arrow_middle2:
+    x: 0.4526124427114526
+    y: 0.7065637065637066
+  l_playfield_arrow_middle3:
+    x: 0.4546151526349546
+    y: 0.6824324324324323
+  l_playfield_arrow_middle4:
+    x: 0.4526124427114526
+    y: 0.6592664092664092
+  l_playfield_arrow_middle5:
+    x: 0.4526124427114526
+    y: 0.637065637065637
+  l_playfield_arrow_middle6:
+    x: 0.45060973278795063
+    y: 0.6138996138996139
+  l_playfield_arrow_middle7:
+    x: 0.4526124427114526
+    y: 0.5907335907335908
+  l_playfield_arrow_middle8:
+    size: 0.03
+    x: 0.4526124427114526
+    y: 0.5675675675675677
+  l_playfield_arrow_middle9:
+    x: 0.4526124427114526
+    y: 0.5444015444015444
