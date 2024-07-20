@@ -4,6 +4,7 @@ config:
   - hardware.yaml
   - keyboard.yaml
   - display.yaml
+  - lights.yaml
 
 modes:
   - base

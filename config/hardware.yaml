@@ -32,14 +32,6 @@ playfields:
     tags: default
     default_source_device: bd_plunger
 
-lights:
-    shoot_again:
-      number: playfield-1-1 
-    left_eye:
-      number: playfield-1-2
-    right_eye:
-      number: playfield-1-3
-
 switches:
   s_start:
     number: cab-2

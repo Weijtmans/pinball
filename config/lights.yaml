@@ -1,0 +1,23 @@
+#config_version=6
+
+lights:
+    l_playfield_arrow_middle1:
+      number: playfield-1-1 
+    l_playfield_arrow_middle2:
+      number: playfield-1-2
+    l_playfield_arrow_middle3:
+      number: playfield-1-3
+    l_playfield_arrow_middle4:
+      number: playfield-1-4
+    l_playfield_arrow_middle5:
+      number: playfield-1-5
+    l_playfield_arrow_middle6:
+      number: playfield-1-6
+    l_playfield_arrow_middle7:
+      number: playfield-1-7
+    l_playfield_arrow_middle8:
+      number: playfield-1-8
+    l_playfield_arrow_middle9:
+      number: playfield-1-9
+    l_playfield_arrow_middle10:
+      number: playfield-1-10

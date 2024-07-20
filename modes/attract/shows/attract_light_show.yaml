@@ -1,0 +1,76 @@
+#show_version=6
+##! mode: attract
+##! show: attract_light_show
+
+- duration: 1
+  lights:
+   l_playfield_arrow_middle2: 0
+   l_playfield_arrow_middle1: ff
+- duration: 1
+  lights:
+   l_playfield_arrow_middle1: 0
+   l_playfield_arrow_middle2: ff
+- duration: 1
+  lights:
+   l_playfield_arrow_middle2: 0
+   l_playfield_arrow_middle3: ff
+- duration: 1
+  lights:
+   l_playfield_arrow_middle3: 0
+   l_playfield_arrow_middle4: ff
+- duration: 1
+  lights:
+   l_playfield_arrow_middle4: 0
+   l_playfield_arrow_middle5: ff
+- duration: 1
+  lights:
+   l_playfield_arrow_middle5: 0
+   l_playfield_arrow_middle6: ff
+- duration: 1
+  lights:
+   l_playfield_arrow_middle6: 0
+   l_playfield_arrow_middle7: ff
+- duration: 1
+  lights:
+   l_playfield_arrow_middle7: 0
+   l_playfield_arrow_middle8: ff
+- duration: 1
+  lights:
+   l_playfield_arrow_middle8: 0
+   l_playfield_arrow_middle9: ff
+- duration: 1
+  lights:
+   l_playfield_arrow_middle9: 0
+   l_playfield_arrow_middle10: ff
+- duration: 1
+  lights:
+   l_playfield_arrow_middle10: 0
+   l_playfield_arrow_middle9: ff
+- duration: 1
+  lights:
+   l_playfield_arrow_middle9: 0
+   l_playfield_arrow_middle8: ff
+- duration: 1
+  lights:
+   l_playfield_arrow_middle8: 0
+   l_playfield_arrow_middle7: ff
+- duration: 1
+  lights:
+   l_playfield_arrow_middle7: 0
+   l_playfield_arrow_middle6: ff
+- duration: 1
+  lights:
+   l_playfield_arrow_middle6: 0
+   l_playfield_arrow_middle5: ff
+- duration: 1
+  lights:
+   l_playfield_arrow_middle5: 0
+   l_playfield_arrow_middle4: ff
+- duration: 1
+  lights:
+   l_playfield_arrow_middle4: 0
+   l_playfield_arrow_middle3: ff
+- duration: 1
+  lights:
+   l_playfield_arrow_middle3: 0
+   l_playfield_arrow_middle2: ff

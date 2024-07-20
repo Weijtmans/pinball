@@ -3,4 +3,8 @@
 ##! show: attract_display_loop
 
 show_player:
-  mode_attract_started: attract_display_loop
+  mode_attract_started:
+    attract_display_loop:
+      speed: 1
+    attract_light_show:
+      speed: 4
