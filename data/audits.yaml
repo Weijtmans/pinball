@@ -1,8 +1,15 @@
 events:
-  game_ended: 3
-  game_started: 7
+  game_ended: 5
+  game_started: 27
 missing_switches:
-  s_right_flipper: 5
+  s_flipper_left_eos: 1
+  s_flipper_right_eos: 2
+  s_left_flipper: 1
+  s_middle_kickout: 2
+  s_right_flipper: 1
+  s_start: 7
+  s_upper_kickout: 7
+  s_upper_slingshot_right: 11
 player:
   score:
     average: 0
@@ -10,14 +17,27 @@ player:
     - 0
     - 0
     - 0
-    total: 3
+    - 0
+    - 0
+    total: 5
 switches:
-  s_launch_button: 25
-  s_left_flipper: 104
-  s_plunger_lane: 25
-  s_plunger_lane_exit: 18
-  s_right_flipper: 38
-  s_start: 16
-  s_trough1: 23
-  s_trough2: 17
-  s_trough_jam: 18
+  s_flipper_left_eos: 49
+  s_flipper_right_eos: 55
+  s_launch_button: 52
+  s_left_flipper: 311
+  s_middle_kickout: 20
+  s_plunger_lane: 66
+  s_plunger_lane_exit: 47
+  s_right_flipper: 202
+  s_slingshot_left: 8
+  s_slingshot_right: 5
+  s_start: 17
+  s_trough1: 56
+  s_trough2: 39
+  s_trough3: 22
+  s_trough4: 20
+  s_trough5: 22
+  s_trough6: 18
+  s_trough_jam: 56
+  s_upper_kickout: 15
+  s_upper_slingshot_right: 7

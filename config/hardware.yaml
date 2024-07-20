@@ -1,0 +1,209 @@
+#config_version=6
+
+hardware:
+  platform: fast
+
+fast:
+  net:
+    controller: neuron
+    debug: true
+    #port: /dev/tty.usbmodem1101
+    io_loop:
+      "1616":
+        model: FP-I/O-1616
+        order: 1
+      "3208":
+        model: FP-I/O-3208
+        order: 2
+      cab:
+        model: FP-I/O-0024
+        order: 3
+    watchdog: 1s
+
+  exp:
+    boards: 
+      playfield:
+        model: FP-EXP-0071
+        led_hz: 30
+        led_fade_time: 100ms
+
+playfields:
+  playfield:
+    tags: default
+    default_source_device: bd_plunger
+
+lights:
+    shoot_again:
+      number: playfield-1-1 
+    left_eye:
+      number: playfield-1-2
+    right_eye:
+      number: playfield-1-3
+
+switches:
+  s_start:
+    number: cab-2
+    tags: start
+  s_launch_button:
+    number: cab-3
+    tags: launch
+  # Flippers
+  s_left_flipper:
+    number: cab-0
+    tags: left_flipper
+  s_flipper_left_eos:
+    number: 3208-24
+  s_right_flipper:
+    number: cab-4
+    tags: right_flipper
+  s_flipper_right_eos:
+    number: 3208-25
+  # Trough
+  s_trough1:
+    number: 3208-0
+    type: NC
+  s_trough2:
+    number: 3208-1
+    type: NC
+  s_trough3:
+    number: 3208-2
+    type: NC
+  s_trough4:
+    number: 3208-3
+    type: NC
+  s_trough5:
+    number: 3208-4
+    type: NC
+  s_trough6:
+    number: 3208-5
+    type: NC
+  s_trough_jam:
+    number: 3208-6
+    type: NC
+  # Plunger
+  s_plunger_lane:
+    number: 3208-7
+  s_plunger_lane_exit:
+    number: 1616-6
+    type: NO
+  # Slingshots
+  s_slingshot_left:
+    number: 3208-21
+  s_slingshot_right:
+    number: 3208-26
+  s_upper_slingshot_right:
+    number: 1616-14
+  # Kickouts
+  s_middle_kickout:
+    number: 1616-15
+  s_upper_kickout:
+    number: 1616-13
+
+coils:
+  # Flipper
+  c_flipper_left_main:
+    number: 3208-0
+    default_pulse_ms: 25
+  c_flipper_left_hold:
+    number: 3208-1
+    allow_enable: true
+  c_flipper_right_main:
+    number: 3208-2
+    default_pulse_ms: 25
+  c_flipper_right_hold:
+    number: 3208-3
+    allow_enable: true
+  # Trough
+  c_trough_eject:
+    number: 3208-6
+    default_pulse_ms: 5
+  # Plunger
+  c_plunger:
+    number: 3208-7
+    default_pulse_ms: 15
+  # Slingshots
+  c_slingshot_left:
+    number: 3208-4
+    default_pulse_ms: 5
+  c_slingshot_right:
+    number: 3208-5
+    default_pulse_ms: 5
+  c_upper_slingshot_right:
+    number: 1616-5
+    default_pulse_ms: 5
+  # Kickouts
+  c_middle_kickout:
+    number: 1616-7
+    default_pulse_ms: 25
+  c_upper_kickout:
+    number: 1616-6
+    default_pulse_ms: 25
+
+flippers:
+  s_left_flipper:
+    main_coil: c_flipper_left_main
+    hold_coil: c_flipper_left_hold
+    activation_switch: s_left_flipper
+    eos_switch: s_flipper_left_eos
+    use_eos: false
+    repulse_on_eos_open: true
+    eos_active_ms_before_repulse: 500
+    enable_events: machine_reset_phase_3
+  s_right_flipper:
+    main_coil: c_flipper_right_main
+    hold_coil: c_flipper_right_hold
+    activation_switch: s_right_flipper
+    eos_switch: s_flipper_right_eos
+    use_eos: false
+    repulse_on_eos_open: true
+    eos_active_ms_before_repulse: 500
+    enable_events: machine_reset_phase_3
+
+ball_devices:
+  # Trough
+  bd_trough:
+    ball_switches: s_trough1, s_trough2, s_trough_jam
+    eject_coil: c_trough_eject
+    tags: trough, home, drain
+    jam_switch: s_trough_jam
+    eject_coil_jam_pulse: 15ms
+    eject_targets: bd_plunger
+    eject_timeouts: 3s
+    debug: true
+  # Plunger
+  bd_plunger:
+    ball_switches: s_plunger_lane
+    eject_coil: c_plunger
+    player_controlled_eject_event: s_launch_button_active
+    confirm_eject_type: switch
+    confirm_eject_switch: s_plunger_lane_exit
+    eject_timeouts: 3s
+  # Scoops
+  bd_middle_kickout:
+    eject_coil: c_middle_kickout
+    ball_switches: s_middle_kickout
+    eject_timeouts: 1s
+  bd_upper_kickout:
+    eject_coil: c_upper_kickout
+    ball_switches: s_upper_kickout
+    eject_timeouts: 1s
+
+autofire_coils:
+  # Slingshots
+  af_slingslot_left:
+    coil: c_slingshot_left
+    switch: s_slingshot_left
+  af_slingslot_right:
+    coil: c_slingshot_right
+    switch: s_slingshot_right
+  af_upper_slingslot_right:
+    coil: c_upper_slingshot_right
+    switch: s_upper_slingshot_right
+
+virtual_platform_start_active_switches:
+  - s_trough1
+  - s_trough2
+  - s_trough3
+  - s_trough4
+  - s_trough5
+  - s_trough6

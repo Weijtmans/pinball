@@ -1,0 +1,30 @@
+#config_version=6
+
+keyboard:
+  "q":
+    switch: s_flipper_left
+  "w":
+    switch: s_flipper_right
+  "0":
+    switch: s_drain
+    toggle: true
+  "1":
+    switch: s_trough1
+    toggle: true
+  "2":
+    switch: s_trough2
+    toggle: true
+  "3":
+    switch: s_trough3
+    toggle: true
+  "4":
+    switch: s_trough3
+    toggle: true
+  "5":
+    switch: s_trough3
+    toggle: true
+  "6":
+    switch: s_trough3
+    toggle: true
+  "s":
+    switch: s_start

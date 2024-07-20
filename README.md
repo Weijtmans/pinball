@@ -8,3 +8,6 @@
 - -V for verbose logging to the console
 - -X ignores hardware and platform settings (for virtual testing using smart virtual)
 - -b will ignore media controller
+
+- mpf -t -b to debug
+- mpf both -V to start
