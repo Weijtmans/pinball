@@ -8,3 +8,5 @@ show_player:
       speed: 1
     attract_light_show_spinner:
       speed: 10
+    attract_light_show_top:
+      speed: 10

@@ -1,0 +1,171 @@
+#show_version=6
+##! mode: attract
+##! show: attract_light_show_top
+
+- time: 0
+  lights:
+    l_playfield_mini_game1: '7A2AB9'
+    l_playfield_mini_game2: '7A2AB9'
+    l_playfield_mini_game3: '7A2AB9'
+    l_playfield_mini_game4: 'BF06A0'
+    l_playfield_upper_drop_target1: 'C87900'
+    l_playfield_upper_drop_target2: 'C8401F'
+    l_playfield_upper_left_target: 'C87900'
+    
+- time: '+1'
+  lights:
+    l_playfield_upper_drop_target1: 'C8401F'
+    
+- time: '+1'
+  lights:
+    l_playfield_mini_game1: '6623BC'
+    l_playfield_mini_game4: '7A2AB9'
+    
+- time: '+1'
+  lights:
+    l_playfield_mini_game1: '0000C8'
+    l_playfield_mini_game2: '0000C8'
+    l_playfield_upper_left_target: 'C8401F'
+    
+- time: '+1'
+  lights:
+    l_playfield_mini_game3: '0000C8'
+    l_playfield_upper_drop_target2: 'C70101'
+    
+- time: '+1'
+  lights:
+    l_playfield_upper_drop_target1: 'C70101'
+    
+- time: '+1'
+  lights:
+    l_playfield_mini_game1: '0051B6'
+    l_playfield_mini_game4: '0000C8'
+    
+- time: '+1'
+  lights:
+    l_playfield_mini_game2: '0051B6'
+    l_playfield_upper_drop_target2: 'C60224'
+    l_playfield_upper_left_target: 'C70101'
+    
+- time: '+1'
+  lights:
+    l_playfield_mini_game3: '0051B6'
+    l_playfield_upper_drop_target1: 'C7010C'
+    l_playfield_upper_drop_target2: 'BF06A0'
+    
+- time: '+1'
+  lights:
+    l_playfield_mini_game4: '0006C7'
+    l_playfield_upper_drop_target1: 'BF06A0'
+    
+- time: '+1'
+  lights:
+    l_playfield_mini_game1: '1B593C'
+    l_playfield_mini_game4: '0051B6'
+    
+- time: '+1'
+  lights:
+    l_playfield_mini_game2: '1B593C'
+    l_playfield_upper_drop_target2: '7A2AB9'
+    l_playfield_upper_left_target: 'BF06A0'
+    
+- time: '+1'
+  lights:
+    l_playfield_mini_game3: '1B593C'
+    l_playfield_upper_drop_target1: '7A2AB9'
+    
+- time: '+1'
+  lights:
+    l_playfield_mini_game4: '06539A'
+    
+- time: '+1'
+  lights:
+    l_playfield_mini_game1: 'C87900'
+    l_playfield_mini_game4: '1B593C'
+    l_playfield_upper_left_target: '7A29B9'
+    
+- time: '+1'
+  lights:
+    l_playfield_mini_game2: 'C87900'
+    l_playfield_upper_drop_target2: '0000C8'
+    l_playfield_upper_left_target: '7A2AB9'
+    
+- time: '+1'
+  lights:
+    l_playfield_mini_game3: 'C87900'
+    l_playfield_upper_drop_target1: '0000C8'
+    
+- time: '+1'
+  lights:
+    l_playfield_mini_game4: '1F5A3A'
+    
+- time: '+1'
+  lights:
+    l_playfield_mini_game1: 'C8401F'
+    l_playfield_mini_game4: 'C87900'
+    l_playfield_upper_left_target: '0000C8'
+    
+- time: '+1'
+  lights:
+    l_playfield_mini_game2: 'C8401F'
+    l_playfield_upper_drop_target2: '0051B6'
+    
+- time: '+1'
+  lights:
+    l_playfield_mini_game3: 'C8401F'
+    l_playfield_upper_drop_target1: '0051B6'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_playfield_mini_game1: 'C70101'
+    l_playfield_mini_game2: 'C83C1D'
+    l_playfield_mini_game4: 'C8401F'
+    l_playfield_upper_left_target: '0051B6'
+    
+- time: '+1'
+  lights:
+    l_playfield_mini_game2: 'C70101'
+    l_playfield_mini_game3: 'C83A1C'
+    l_playfield_upper_drop_target2: '1B593C'
+    
+- time: '+1'
+  lights:
+    l_playfield_mini_game3: 'C70101'
+    l_playfield_upper_drop_target1: '1B593C'
+    
+- time: '+1'
+  lights:
+    l_playfield_mini_game4: 'C72110'
+    
+- time: '+1'
+  lights:
+    l_playfield_mini_game1: 'BF06A0'
+    l_playfield_mini_game2: 'C0058F'
+    l_playfield_mini_game4: 'C70101'
+    l_playfield_upper_left_target: '1B593C'
+    
+- time: '+1'
+  lights:
+    l_playfield_mini_game2: 'BF06A0'
+    l_playfield_mini_game3: 'C10587'
+    l_playfield_upper_drop_target2: 'C87900'
+    
+- time: '+1'
+  lights:
+    l_playfield_mini_game3: 'BF06A0'
+    l_playfield_upper_drop_target1: 'C87900'
+    
+- time: '+1'
+  lights:
+    l_playfield_mini_game4: 'BF06A0'
+    
+- time: '+1'
+  lights:
+    l_playfield_mini_game1: '7A2AB9'
+    l_playfield_mini_game2: '7A2AB9'
+    l_playfield_upper_left_target: 'C87900'
+    
