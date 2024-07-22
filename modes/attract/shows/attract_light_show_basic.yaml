@@ -1,6 +1,6 @@
 #show_version=6
 ##! mode: attract
-##! show: attract_light_show
+##! show: attract_light_show_basic
 
 - duration: 1
   lights:
