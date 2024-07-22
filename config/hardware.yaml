@@ -22,7 +22,7 @@ fast:
 
   exp:
     boards: 
-      playfield:
+      leds:
         model: FP-EXP-0071
         led_hz: 30
         led_fade_time: 100ms

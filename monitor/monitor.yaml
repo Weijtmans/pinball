@@ -1,5 +1,75 @@
-device_size: 0.03
+autofire:
+  af_slingslot_left:
+    rotation: 250
+    shape: TRIANGLE
+    size: 0.07
+    x: 0.2102845419677103
+    y: 0.7104247104247104
+  af_slingslot_right:
+    rotation: 110
+    shape: TRIANGLE
+    size: 0.07
+    x: 0.696943053378697
+    y: 0.7123552123552124
+  af_upper_slingslot_right:
+    rotation: 110
+    shape: TRIANGLE
+    size: 0.06
+    x: 0.7830595800892831
+    y: 0.14671814671814673
+ball_device:
+  bd_middle_kickout:
+    shape: CIRCLE
+    size: 0.06
+    x: 0.8211110686358212
+    y: 0.26640926640926643
+  bd_plunger:
+    x: 0.9633034732044633
+    y: 0.9247104247104246
+  bd_trough:
+    rotation: 330
+    size: 0.04
+    x: 0.763032480854263
+    y: 0.8822393822393823
+  bd_upper_kickout:
+    shape: CIRCLE
+    size: 0.06
+    x: 0.8912059159583913
+    y: 0.055984555984555984
+device_size: 0.04
+flipper:
+  s_left_flipper:
+    rotation: 300
+    shape: RECTANGLE
+    size: 0.1
+    x: 0.3364552671483365
+    y: 0.8474903474903476
+  s_right_flipper:
+    rotation: 60
+    shape: RECTANGLE
+    size: 0.1
+    x: 0.5727750381215728
+    y: 0.8474903474903476
 light:
+  l_playfield_above_arrow:
+    size: 0.05
+    x: 0.4305826335529306
+    y: 0.48552123552123555
+  l_playfield_arrow_left1:
+    x: 0.3664959160008665
+    y: 0.6833976833976834
+  l_playfield_arrow_left2:
+    x: 0.33445255722483447
+    y: 0.665057915057915
+  l_playfield_arrow_left3:
+    x: 0.30240919844880243
+    y: 0.6476833976833977
+  l_playfield_arrow_left4:
+    x: 0.2703658396727704
+    y: 0.6293436293436293
+  l_playfield_arrow_left5:
+    x: 0.23832248089673833
+    y: 0.611969111969112
   l_playfield_arrow_middle1:
     x: 0.4526124427114526
     y: 0.7306949806949807
@@ -10,8 +80,8 @@ light:
     x: 0.4526124427114526
     y: 0.7065637065637066
   l_playfield_arrow_middle3:
-    x: 0.4546151526349546
-    y: 0.6824324324324323
+    x: 0.4526124427114526
+    y: 0.6833976833976834
   l_playfield_arrow_middle4:
     x: 0.4526124427114526
     y: 0.6592664092664092
@@ -19,15 +89,165 @@ light:
     x: 0.4526124427114526
     y: 0.637065637065637
   l_playfield_arrow_middle6:
-    x: 0.45060973278795063
+    x: 0.4526124427114526
     y: 0.6138996138996139
   l_playfield_arrow_middle7:
     x: 0.4526124427114526
     y: 0.5907335907335908
   l_playfield_arrow_middle8:
-    size: 0.03
+    size: 0.04
     x: 0.4526124427114526
     y: 0.5675675675675677
   l_playfield_arrow_middle9:
     x: 0.4526124427114526
     y: 0.5444015444015444
+  l_playfield_arrow_right1:
+    x: 0.5407316793455408
+    y: 0.6853281853281853
+  l_playfield_arrow_right2:
+    x: 0.5707723281980709
+    y: 0.6669884169884169
+  l_playfield_arrow_right3:
+    x: 0.6028156869741028
+    y: 0.6486486486486487
+  l_playfield_arrow_right4:
+    x: 0.6328563358266328
+    y: 0.6312741312741312
+  l_playfield_arrow_right5:
+    x: 0.6628969846791628
+    y: 0.6138996138996139
+  l_playfield_ball_drain1:
+    shape: CIRCLE
+    size: 0.05
+    x: 0.4546151526349546
+    y: 0.86003861003861
+  l_playfield_ball_drain2:
+    size: 0.05
+    x: 0.4546151526349546
+    y: 0.8484555984555985
+  l_playfield_left_drop_target:
+    size: 0.05
+    x: 0.1522059541861522
+    y: 0.5366795366795367
+  l_playfield_left_inlane:
+    size: 0.05
+    x: 0.21228725189121228
+    y: 0.7693050193050193
+  l_playfield_left_of_arrow:
+    size: 0.05
+    x: 0.38251759538888247
+    y: 0.5444015444015444
+  l_playfield_left_outlane:
+    size: 0.05
+    x: 0.09012194655759012
+    y: 0.7953667953667953
+  l_playfield_lower1:
+    size: 0.05
+    x: 0.3424633969188425
+    y: 0.7808880308880308
+  l_playfield_lower2:
+    size: 0.05
+    x: 0.41656366408841655
+    y: 0.7808880308880308
+  l_playfield_lower3:
+    size: 0.05
+    x: 0.4906639312579907
+    y: 0.7808880308880308
+  l_playfield_lower4:
+    size: 0.05
+    x: 0.5647641984275649
+    y: 0.7808880308880308
+  l_playfield_middle_loop_low1:
+    shape: TRIANGLE
+    x: 0.38251759538888247
+    y: 0.4546332046332046
+  l_playfield_middle_loop_low2:
+    shape: TRIANGLE
+    x: 0.38251759538888247
+    y: 0.4391891891891892
+  l_playfield_middle_loop_target:
+    size: 0.05
+    x: 0.3324498473013324
+    y: 0.4498069498069498
+  l_playfield_middle_loop_up1:
+    rotation: 350
+    shape: TRIANGLE
+    x: 0.3705013358478705
+    y: 0.4092664092664093
+  l_playfield_middle_loop_up2:
+    rotation: 350
+    shape: TRIANGLE
+    x: 0.3644932060773645
+    y: 0.39285714285714285
+  l_playfield_mini_game1:
+    size: 0.03
+    x: 0.05407316793455407
+    y: 0.05984555984555985
+  l_playfield_mini_game2:
+    size: 0.03
+    x: 0.09613007632809614
+    y: 0.06563706563706564
+  l_playfield_mini_game3:
+    size: 0.03
+    x: 0.1441951144921442
+    y: 0.07142857142857144
+  l_playfield_mini_game4:
+    size: 0.03
+    x: 0.19025744273269024
+    y: 0.07818532818532818
+  l_playfield_right_inlane:
+    size: 0.05
+    x: 0.694940343455195
+    y: 0.7722007722007722
+  l_playfield_right_of_arrow1:
+    size: 0.05
+    x: 0.5166991602635167
+    y: 0.5434362934362934
+  l_playfield_right_of_arrow2:
+    size: 0.05
+    x: 0.6568888549086569
+    y: 0.5212355212355213
+  l_playfield_right_of_arrow3:
+    size: 0.05
+    x: 0.757024351083757
+    y: 0.5019305019305019
+  l_playfield_right_outlane:
+    size: 0.05
+    x: 0.8151029388653152
+    y: 0.7972972972972973
+  l_playfield_right_ramp1:
+    rotation: 20
+    shape: TRIANGLE
+    size: 0.04
+    x: 0.730989122078231
+    y: 0.45077220077220076
+  l_playfield_right_ramp2:
+    rotation: 20
+    shape: TRIANGLE
+    x: 0.743005381619243
+    y: 0.4362934362934363
+  l_playfield_upper_drop_target1:
+    rotation: 350
+    shape: TRIANGLE
+    size: 0.04
+    x: 0.3664959160008665
+    y: 0.13803088803088803
+  l_playfield_upper_drop_target2:
+    rotation: 350
+    shape: TRIANGLE
+    x: 0.3584850763068585
+    y: 0.12065637065637067
+  l_playfield_upper_left_target:
+    size: 0.05
+    x: 0.3564823663833565
+    y: 0.17567567567567569
+switch:
+  s_plunger_lane:
+    shape: RECTANGLE
+    x: 0.9532899235869533
+    y: 0.86003861003861
+  s_plunger_lane_exit:
+    rotation: 40
+    shape: RECTANGLE
+    x: 0.9332628243519333
+    y: 0.14575289575289577
