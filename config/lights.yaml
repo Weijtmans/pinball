@@ -1,6 +1,9 @@
 #config_version=6
   # NOTE: The numbering starts from 1 in the code and 0 on the drawing
 
+light_settings:
+  default_fade_ms: 40
+
 lights:
   # Lower playfield
   # LED string 1
