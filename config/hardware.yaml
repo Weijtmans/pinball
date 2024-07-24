@@ -50,6 +50,11 @@ switches:
     tags: right_flipper
   s_flipper_right_eos:
     number: 3208-25
+  s_upper_flipper_left_eos:
+    number: 3208-8
+    tags: upper_flipper
+  s_upper_flipper_right_eos:
+    number: 3208-9
   # Trough
   s_trough1:
     number: 3208-0
@@ -90,6 +95,74 @@ switches:
     number: 1616-15
   s_upper_kickout:
     number: 1616-13
+  # Targets
+  s_target_middle:
+    number: 3208-10
+    debounce: quick
+    ignore_window_ms: 1000ms
+  s_target_right:
+    number: 3208-13
+    debounce: quick
+    ignore_window_ms: 1000ms
+  s_target_top:
+    number: 1616-5
+    debounce: quick
+    ignore_window_ms: 1000ms
+  # Drop targets
+  s_drop_target_top1:
+    number: 1616-8
+  s_drop_target_top2:
+    number: 1616-9
+  s_drop_target_top3:
+    number: 1616-10
+  s_drop_target_top4:
+    number: 1616-11
+  s_drop_target_top5:
+    number: 1616-12
+  s_drop_target_left1:
+    number: 3208-18
+  s_drop_target_left2:
+    number: 3208-19
+  s_drop_target_left3:
+    number: 3208-20
+  s_drop_target_right1:
+    number: 3208-29
+  s_drop_target_right2:
+    number: 3208-30
+  s_drop_target_right3:
+    number: 3208-31
+  # Mini playfield
+  s_mini_playfield_switch1:
+    number: 1616-0
+  s_mini_playfield_switch2:
+    number: 1616-1
+  s_mini_playfield_switch3:
+    number: 1616-2
+  s_mini_playfield_switch4:
+    number: 1616-3
+  # Bumpers
+  # TODO: Check which elements are connected to this switch
+  s_bumper_top:
+    number: 1616-4
+  s_bumper_middle:
+    number: 3208-11
+  s_bumper_right:
+    number: 3208-12
+  # Orbit
+  s_orbit1:
+    number: 3208-16
+  s_orbit2:
+    number: 3208-17
+  # Inlanes
+  s_inlane_left:
+    number: 3208-23
+  s_inlane_right:
+    number: 3208-27
+  # Outlanes
+  s_outlane_left:
+    number: 3208-22
+  s_outlane_right:
+    number: 3208-28
 
 coils:
   # Flipper
@@ -104,6 +177,18 @@ coils:
     default_pulse_ms: 25
   c_flipper_right_hold:
     number: 3208-3
+    allow_enable: true
+  c_upper_flipper_left_main:
+    number: 1616-0
+    default_pulse_ms: 25
+  c_upper_flipper_left_hold:
+    number: 1616-1
+    allow_enable: true
+  c_upper_flipper_right_main:
+    number: 1616-2
+    default_pulse_ms: 25
+  c_upper_flipper_right_hold:
+    number: 1616-3
     allow_enable: true
   # Trough
   c_trough_eject:
@@ -130,9 +215,86 @@ coils:
   c_upper_kickout:
     number: 1616-6
     default_pulse_ms: 25
+  # Drop targets
+  c_drop_target_top_down:
+    number: 1616-8
+    default_pulse_ms: 25
+  c_drop_target_top1:
+    number: 1616-13
+  c_drop_target_top2:
+    number: 1616-12
+  c_drop_target_top3:
+    number: 1616-11
+  c_drop_target_top4:
+    number: 1616-10
+  c_drop_target_top5:
+    number: 1616-9
+  c_drop_target_left_reset:
+    number: 1616-14
+  c_drop_target_right_reset:
+    number: 1616-15
+
+drop_targets:
+  d_top_1:
+    switch: s_drop_target_top1
+    reset_coil: c_drop_target_top1
+    knockdown_coil: c_drop_target_top_down
+  d_top_2:
+    switch: s_drop_target_top2
+    reset_coil: c_drop_target_top2
+    knockdown_coil: c_drop_target_top_down
+  d_top_3:
+    switch: s_drop_target_top3
+    reset_coil: c_drop_target_top3
+    knockdown_coil: c_drop_target_top_down
+  d_top_4:
+    switch: s_drop_target_top4
+    reset_coil: c_drop_target_top4
+    knockdown_coil: c_drop_target_top_down
+  d_top_5:
+    switch: s_drop_target_top5
+    reset_coil: c_drop_target_top5
+    knockdown_coil: c_drop_target_top_down
+  d_left_1:
+    switch: s_drop_target_left1
+    reset_coil: c_drop_target_left_reset
+  d_left_2:
+    switch: s_drop_target_left2
+    reset_coil: c_drop_target_left_reset
+  d_left_3:
+    switch: s_drop_target_left3
+    reset_coil: c_drop_target_left_reset
+  d_right_1:
+    switch: s_drop_target_right1
+    reset_coil: c_drop_target_right_reset
+  d_right_2:
+    switch: s_drop_target_right2
+    reset_coil: c_drop_target_right_reset
+  d_right_3:
+    switch: s_drop_target_right3
+    reset_coil: c_drop_target_right_reset
+
+sequence_shots:
+  orbit:
+    switch_sequence: s_orbit1, s_orbit2
+    sequence_timeout: 3s
+
+drop_target_banks:
+  b_bank_top:
+    drop_targets: d_top_1, d_top_2, d_top_3, d_top_4, d_top_5
+    reset_coils: c_drop_target_top1, c_drop_target_top2, c_drop_target_top3, c_drop_target_top4, c_drop_target_top5
+    reset_on_complete: 1s
+  b_bank_left:
+    drop_targets: d_left_1, d_left_2, d_left_3
+    reset_coils: c_drop_target_left_reset
+    reset_on_complete: 1s
+  b_bank_right:
+    drop_targets: d_right_1, d_right_2, d_right_3
+    reset_coils: c_drop_target_right_reset
+    reset_on_complete: 1s
 
 flippers:
-  s_left_flipper:
+  f_left_flipper:
     main_coil: c_flipper_left_main
     hold_coil: c_flipper_left_hold
     activation_switch: s_left_flipper
@@ -141,12 +303,30 @@ flippers:
     repulse_on_eos_open: true
     eos_active_ms_before_repulse: 500
     enable_events: machine_reset_phase_3
-  s_right_flipper:
+  f_right_flipper:
     main_coil: c_flipper_right_main
     hold_coil: c_flipper_right_hold
     activation_switch: s_right_flipper
     eos_switch: s_flipper_right_eos
     use_eos: false
+    repulse_on_eos_open: true
+    eos_active_ms_before_repulse: 500
+    enable_events: machine_reset_phase_3
+  f_upper_flipper_left:
+    main_coil: c_upper_flipper_left_main
+    hold_coil: c_upper_flipper_left_hold
+    activation_switch:  s_left_flipper
+    eos_switch: s_upper_flipper_left_eos
+    use_eos: true
+    repulse_on_eos_open: true
+    eos_active_ms_before_repulse: 500
+    enable_events: machine_reset_phase_3
+  f_upper_flipper_right:
+    main_coil: c_upper_flipper_right_main
+    hold_coil: c_upper_flipper_right_hold
+    activation_switch: s_right_flipper
+    eos_switch: s_upper_flipper_right_eos
+    use_eos: true
     repulse_on_eos_open: true
     eos_active_ms_before_repulse: 500
     enable_events: machine_reset_phase_3
