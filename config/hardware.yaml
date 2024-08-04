@@ -3,6 +3,10 @@
 hardware:
   platform: fast
 
+machine:
+  balls_installed: 2
+  min_balls: 1
+
 fast:
   net:
     controller: neuron
@@ -110,15 +114,15 @@ switches:
     ignore_window_ms: 1000ms
   # Drop targets
   s_drop_target_top1:
-    number: 1616-8
-  s_drop_target_top2:
     number: 1616-9
-  s_drop_target_top3:
+  s_drop_target_top2:
     number: 1616-10
-  s_drop_target_top4:
+  s_drop_target_top3:
     number: 1616-11
-  s_drop_target_top5:
+  s_drop_target_top4:
     number: 1616-12
+  s_drop_target_top5:
+    number: 1616-8
   s_drop_target_left1:
     number: 3208-18
   s_drop_target_left2:
@@ -126,11 +130,14 @@ switches:
   s_drop_target_left3:
     number: 3208-20
   s_drop_target_right1:
+    type: NC
     number: 3208-29
   s_drop_target_right2:
     number: 3208-30
+    type: NC
   s_drop_target_right3:
     number: 3208-31
+    type: NC
   # Mini playfield
   s_mini_playfield_switch1:
     number: 1616-0
@@ -141,7 +148,6 @@ switches:
   s_mini_playfield_switch4:
     number: 1616-3
   # Bumpers
-  # TODO: Check which elements are connected to this switch
   s_bumper_top:
     number: 1616-4
   s_bumper_middle:
@@ -156,40 +162,44 @@ switches:
   # Inlanes
   s_inlane_left:
     number: 3208-23
+    tags: playfield_active, inlane
   s_inlane_right:
     number: 3208-27
+    tags: playfield_active, inlane
   # Outlanes
   s_outlane_left:
     number: 3208-22
+    tags: playfield_active, outlane
   s_outlane_right:
     number: 3208-28
+    tags: playfield_active, outlane
 
 coils:
   # Flipper
   c_flipper_left_main:
     number: 3208-0
-    default_pulse_ms: 25
+    default_pulse_ms: 30
   c_flipper_left_hold:
     number: 3208-1
-    allow_enable: true
+    max_hold_power: 1.0
   c_flipper_right_main:
     number: 3208-2
-    default_pulse_ms: 25
+    default_pulse_ms: 30
   c_flipper_right_hold:
     number: 3208-3
-    allow_enable: true
+    max_hold_power: 1.0
   c_upper_flipper_left_main:
     number: 1616-0
-    default_pulse_ms: 25
+    default_pulse_ms: 5
   c_upper_flipper_left_hold:
     number: 1616-1
-    allow_enable: true
+    max_hold_power: 1.0
   c_upper_flipper_right_main:
     number: 1616-2
-    default_pulse_ms: 25
+    default_pulse_ms: 5
   c_upper_flipper_right_hold:
     number: 1616-3
-    allow_enable: true
+    max_hold_power: 1.0
   # Trough
   c_trough_eject:
     number: 3208-6
@@ -218,21 +228,32 @@ coils:
   # Drop targets
   c_drop_target_top_down:
     number: 1616-8
-    default_pulse_ms: 25
+    default_pulse_ms: 20
   c_drop_target_top1:
     number: 1616-13
+    default_pulse_ms: 10
   c_drop_target_top2:
     number: 1616-12
+    default_pulse_ms: 10
   c_drop_target_top3:
     number: 1616-11
+    default_pulse_ms: 10
   c_drop_target_top4:
     number: 1616-10
+    default_pulse_ms: 10
   c_drop_target_top5:
     number: 1616-9
+    default_pulse_ms: 10
   c_drop_target_left_reset:
     number: 1616-14
+    default_pulse_ms: 20
   c_drop_target_right_reset:
     number: 1616-15
+    default_pulse_ms: 15
+  # Mini playfield
+  c_mini_playfield_plunger:
+    number: 1616-4
+    default_pulse_ms: 2
 
 drop_targets:
   d_top_1:
@@ -299,37 +320,29 @@ flippers:
     hold_coil: c_flipper_left_hold
     activation_switch: s_left_flipper
     eos_switch: s_flipper_left_eos
-    use_eos: false
     repulse_on_eos_open: true
     eos_active_ms_before_repulse: 500
-    enable_events: machine_reset_phase_3
   f_right_flipper:
     main_coil: c_flipper_right_main
     hold_coil: c_flipper_right_hold
     activation_switch: s_right_flipper
     eos_switch: s_flipper_right_eos
-    use_eos: false
     repulse_on_eos_open: true
     eos_active_ms_before_repulse: 500
-    enable_events: machine_reset_phase_3
   f_upper_flipper_left:
     main_coil: c_upper_flipper_left_main
     hold_coil: c_upper_flipper_left_hold
     activation_switch:  s_left_flipper
     eos_switch: s_upper_flipper_left_eos
-    use_eos: true
     repulse_on_eos_open: true
     eos_active_ms_before_repulse: 500
-    enable_events: machine_reset_phase_3
   f_upper_flipper_right:
     main_coil: c_upper_flipper_right_main
     hold_coil: c_upper_flipper_right_hold
     activation_switch: s_right_flipper
     eos_switch: s_upper_flipper_right_eos
-    use_eos: true
     repulse_on_eos_open: true
     eos_active_ms_before_repulse: 500
-    enable_events: machine_reset_phase_3
 
 ball_devices:
   # Trough
@@ -371,11 +384,12 @@ autofire_coils:
   af_upper_slingslot_right:
     coil: c_upper_slingshot_right
     switch: s_upper_slingshot_right
+  # Mini playfield
+  af_mini_playfield_plunger:
+    coil: c_mini_playfield_plunger
+    switch: s_target_top
 
 virtual_platform_start_active_switches:
   - s_trough1
   - s_trough2
   - s_trough3
-  - s_trough4
-  - s_trough5
-  - s_trough6
