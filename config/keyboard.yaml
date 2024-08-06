@@ -2,12 +2,9 @@
 
 keyboard:
   "q":
-    switch: s_flipper_left
+    switch: s_left_flipper
   "w":
-    switch: s_flipper_right
-  "0":
-    switch: s_drain
-    toggle: true
+    switch: s_right_flipper
   "1":
     switch: s_trough1
     toggle: true
@@ -17,14 +14,9 @@ keyboard:
   "3":
     switch: s_trough3
     toggle: true
-  "4":
-    switch: s_trough3
-    toggle: true
-  "5":
-    switch: s_trough3
-    toggle: true
-  "6":
-    switch: s_trough3
-    toggle: true
   "s":
     switch: s_start
+  "[":
+    switch: s_plunger_lane
+  "]":
+    switch: s_plunger_lane_exit

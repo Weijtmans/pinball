@@ -11,3 +11,10 @@
 
 - mpf -t -b to debug
 - mpf both -V to start
+
+## Todo
+- Lights
+- Modes
+- Multiball
+- Magnets
+- DMD

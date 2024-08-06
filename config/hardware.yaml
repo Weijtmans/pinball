@@ -40,7 +40,7 @@ switches:
   s_start:
     number: cab-2
     tags: start
-  s_launch_button:
+  s_launch:
     number: cab-3
     tags: launch
   # Flippers
@@ -322,6 +322,7 @@ flippers:
     eos_switch: s_flipper_left_eos
     repulse_on_eos_open: true
     eos_active_ms_before_repulse: 500
+    enable_events: machine_reset_phase_3
   f_right_flipper:
     main_coil: c_flipper_right_main
     hold_coil: c_flipper_right_hold
@@ -329,6 +330,7 @@ flippers:
     eos_switch: s_flipper_right_eos
     repulse_on_eos_open: true
     eos_active_ms_before_repulse: 500
+    enable_events: machine_reset_phase_3
   f_upper_flipper_left:
     main_coil: c_upper_flipper_left_main
     hold_coil: c_upper_flipper_left_hold
@@ -336,6 +338,7 @@ flippers:
     eos_switch: s_upper_flipper_left_eos
     repulse_on_eos_open: true
     eos_active_ms_before_repulse: 500
+    enable_events: machine_reset_phase_3
   f_upper_flipper_right:
     main_coil: c_upper_flipper_right_main
     hold_coil: c_upper_flipper_right_hold
@@ -343,6 +346,7 @@ flippers:
     eos_switch: s_upper_flipper_right_eos
     repulse_on_eos_open: true
     eos_active_ms_before_repulse: 500
+    enable_events: machine_reset_phase_3
 
 ball_devices:
   # Trough
@@ -359,7 +363,7 @@ ball_devices:
   bd_plunger:
     ball_switches: s_plunger_lane
     eject_coil: c_plunger
-    player_controlled_eject_event: s_launch_button_active
+    player_controlled_eject_event: s_launch_active
     confirm_eject_type: switch
     confirm_eject_switch: s_plunger_lane_exit
     eject_timeouts: 3s
