@@ -5,12 +5,80 @@ mode:
   start_events: ball_starting
   priority: 100
 
+ball_saves:
+  default:
+    active_time: 10s
+    grace_period: 2s
+    hurry_up_time: 5s
+    enable_events: mode_base_started
+    timer_start_events: balldevice_bd_plunger_ball_eject_success
+    disable_events: ball_will_end
+    auto_launch: true
+    balls_to_save: 1
+    early_ball_save_events: s_outlane_left_active, s_outlane_right_active
+
 variable_player:
   # Slingshots
   s_slingshot_right_active:
     score: 50
   s_slingshot_left_active:
     score: 50
+  s_upper_slingshot_right_active:
+    score: 50
+  s_middle_kickout_active:
+    score: 100
+  s_upper_kickout_active:
+    score: 100
+  s_target_middle_active:
+    score: 200
+  s_target_right_active:
+    score: 200
+  s_target_top_active:
+    score: 200
+  s_drop_target_top1_active:
+    score: 50
+  s_drop_target_top2_active:
+    score: 50
+  s_drop_target_top3_active:
+    score: 50
+  s_drop_target_top4_active:
+    score: 50
+  s_drop_target_top5_active:
+    score: 50
+  s_drop_target_left1_active:
+    score: 50
+  s_drop_target_left2_active:
+    score: 50
+  s_drop_target_left3_active:
+    score: 50
+  s_drop_target_right1_active:
+    score: 50
+  s_drop_target_right2_active:
+    score: 50
+  s_drop_target_right3_active:
+    score: 50
+  s_bumper_top_active:
+    score: 50
+  s_bumper_middle_active:
+    score: 50
+  s_bumper_right_active:
+    score: 50
+  s_orbit1_active:
+    score: 125
+  s_orbit2_active:
+    score: 125
+  s_inlane_left_active:
+    score: 100
+  s_inlane_right_active:
+    score: 100
+  mini_game_complete:
+    score: 5000
+  drop_target_bank_b_bank_top_up:
+    score: 1000
+  drop_target_bank_b_bank_right_up:
+    score: 500
+  drop_target_bank_b_bank_left_up:
+    score: 500
 
 shots:
   left_inlane:
@@ -55,7 +123,7 @@ sound_player:
     shoot_the_ball:
       loops: 0
 
-  s_launch_active:
+  sw_launch_active:
     shoot_the_ball:
       action: stop
     base_background_music:
@@ -67,6 +135,25 @@ sound_player:
   
   ball_ending:
     that_happens:
+      loops: 0
+    base_background_music:
+      action: stop
+  
+  drop_target_bank_b_bank_top_up:
+    got_all:
+      loops: 0
+  drop_target_bank_b_bank_right_up:
+    got_all:
+      loops: 0
+  drop_target_bank_b_bank_left_up:
+    got_all:
+      loops: 0
+  mini_game_complete:
+    got_all:
+      loops: 0
+
+  ball_save_default_saving_ball:
+    oof_that_was_close:
       loops: 0
 
 slide_player:
@@ -92,3 +179,16 @@ slide_player:
         anchor_x: right
         anchor_y: bottom
         font_size: 50
+
+show_player:
+  ball_save_default_timer_start:
+    ball_save_show:
+      action: play
+      speed: 5
+  ball_save_default_hurry_up:
+    ball_save_show:
+      action: play
+      speed: 10
+  ball_save_default_disabled:
+    ball_save_show:
+      action: stop

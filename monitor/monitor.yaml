@@ -69,6 +69,7 @@ light:
     x: 0.5407316793455408
     y: 0.6853281853281853
   l_playfield_arrow_right2:
+    size: 0.04
     x: 0.5707723281980709
     y: 0.6669884169884169
   l_playfield_arrow_right3:
@@ -312,8 +313,8 @@ switch:
     y: 0.11776061776061778
   s_mini_playfield_switch4:
     shape: RECTANGLE
-    x: 0.18825473280918825
-    y: 0.12355212355212356
+    x: 0.19025744273269024
+    y: 0.12451737451737452
   s_orbit1:
     rotation: 340
     shape: RECTANGLE
@@ -377,6 +378,7 @@ switch:
     y: 0.48841698841698844
   s_target_top:
     shape: RECTANGLE
+    size: 0.04
     x: 0.2984037786017984
     y: 0.18822393822393824
   s_trough1:

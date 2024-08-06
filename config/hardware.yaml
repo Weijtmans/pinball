@@ -363,7 +363,7 @@ ball_devices:
   bd_plunger:
     ball_switches: s_plunger_lane
     eject_coil: c_plunger
-    player_controlled_eject_event: s_launch_active
+    player_controlled_eject_event: sw_launch_active
     confirm_eject_type: switch
     confirm_eject_switch: s_plunger_lane_exit
     eject_timeouts: 3s
