@@ -3,10 +3,6 @@
 hardware:
   platform: fast
 
-machine:
-  balls_installed: 2
-  min_balls: 1
-
 fast:
   net:
     controller: neuron
@@ -30,6 +26,10 @@ fast:
         model: FP-EXP-0071
         led_hz: 30
         led_fade_time: 100ms
+
+machine:
+  balls_installed: 2
+  min_balls: 1
 
 playfields:
   playfield:

@@ -361,6 +361,7 @@ switch:
     y: 0.7171814671814672
   s_start:
     shape: CIRCLE
+    size: 0.04
     x: 0.8050893892478052
     y: 0.9517374517374518
   s_target_middle:

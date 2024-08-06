@@ -1,0 +1,30 @@
+#config_version=6
+
+sound_system:
+  tracks:
+    music:
+      type: standard
+      simultaneous_sounds: 1
+      volume: 0.5
+      preload: true
+    voice:
+      type: standard
+      simultaneous_sounds: 1
+      volume: 1
+      preload: true
+    sfx:
+      type: standard
+      simultaneous_sounds: 8
+      volume: 0.4
+      preload: true
+
+assets:
+  sounds:
+    default:
+      track: sfx
+    music:
+      track: music
+    sfx:
+      track: sfx
+    voice:
+      track: voice

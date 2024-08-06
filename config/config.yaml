@@ -5,6 +5,11 @@ config:
   - keyboard.yaml
   - display.yaml
   - lights.yaml
+  - audio.yaml
 
 modes:
   - base
+
+game:
+  balls_per_game: 3
+  max_players: 4
