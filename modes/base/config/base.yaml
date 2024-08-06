@@ -4,6 +4,7 @@
 mode:
   start_events: ball_starting
   priority: 100
+  restart_on_next_ball: true
 
 # Ball save config for the first 10 seconds of the game
 ball_saves:

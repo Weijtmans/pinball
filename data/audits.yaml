@@ -1,42 +1,49 @@
 events:
   game_ended: 20
-  game_started: 98
+  game_started: 100
 missing_switches:
-  s_bumper_middle: 40
-  s_bumper_right: 40
-  s_bumper_top: 22
-  s_drop_target_right1: 8
-  s_drop_target_right2: 8
-  s_drop_target_right3: 8
-  s_flipper_left_eos: 40
-  s_flipper_right_eos: 40
-  s_inlane_left: 32
-  s_inlane_right: 32
+  s_bumper_middle: 42
+  s_bumper_right: 42
+  s_bumper_top: 24
+  s_drop_target_left1: 2
+  s_drop_target_left2: 2
+  s_drop_target_left3: 2
+  s_drop_target_right1: 10
+  s_drop_target_right2: 10
+  s_drop_target_right3: 10
+  s_drop_target_top1: 2
+  s_drop_target_top2: 2
+  s_drop_target_top3: 2
+  s_drop_target_top4: 2
+  s_drop_target_top5: 2
+  s_flipper_left_eos: 42
+  s_flipper_right_eos: 42
+  s_inlane_left: 34
+  s_inlane_right: 34
   s_launch_button: 1
-  s_left_flipper: 36
-  s_middle_kickout: 40
-  s_mini_playfield_switch1: 11
-  s_mini_playfield_switch2: 10
-  s_mini_playfield_switch3: 10
-  s_mini_playfield_switch4: 10
-  s_outlane_left: 24
-  s_outlane_right: 11
-  s_right_flipper: 36
-  s_slingshot_left: 18
-  s_slingshot_right: 18
-  s_start: 9
-  s_target_middle: 40
-  s_target_right: 40
-  s_trough2: 11
-  s_trough3: 36
-  s_trough4: 35
-  s_trough5: 40
-  s_trough6: 40
-  s_trough_jam: 40
-  s_upper_flipper_left_eos: 40
-  s_upper_flipper_right_eos: 40
-  s_upper_kickout: 41
-  s_upper_slingshot_right: 40
+  s_left_flipper: 38
+  s_mini_playfield_switch1: 13
+  s_mini_playfield_switch2: 12
+  s_mini_playfield_switch3: 12
+  s_mini_playfield_switch4: 12
+  s_orbit1: 2
+  s_orbit2: 2
+  s_outlane_left: 26
+  s_outlane_right: 13
+  s_right_flipper: 38
+  s_slingshot_left: 20
+  s_slingshot_right: 20
+  s_start: 11
+  s_target_middle: 42
+  s_target_right: 42
+  s_target_top: 2
+  s_trough4: 37
+  s_trough5: 42
+  s_trough6: 42
+  s_trough_jam: 42
+  s_upper_flipper_left_eos: 42
+  s_upper_flipper_right_eos: 42
+  s_upper_slingshot_right: 42
 player:
   score:
     average: 278
@@ -79,10 +86,10 @@ switches:
   s_flipper_right_eos: 490
   s_inlane_left: 26
   s_inlane_right: 8
-  s_launch: 39
+  s_launch: 43
   s_launch_button: 130
   s_left_flipper: 738
-  s_middle_kickout: 52
+  s_middle_kickout: 57
   s_mini_playfield_switch1: 10
   s_mini_playfield_switch2: 13
   s_mini_playfield_switch3: 14
@@ -91,8 +98,8 @@ switches:
   s_orbit2: 27
   s_outlane_left: 9
   s_outlane_right: 10
-  s_plunger_lane: 192
-  s_plunger_lane_exit: 177
+  s_plunger_lane: 197
+  s_plunger_lane_exit: 182
   s_right_flipper: 743
   s_slingshot_left: 61
   s_slingshot_right: 63
@@ -100,14 +107,14 @@ switches:
   s_target_middle: 68
   s_target_right: 26
   s_target_top: 58
-  s_trough1: 171
-  s_trough2: 98
-  s_trough3: 75
+  s_trough1: 174
+  s_trough2: 99
+  s_trough3: 76
   s_trough4: 71
   s_trough5: 69
   s_trough6: 58
   s_trough_jam: 131
   s_upper_flipper_left_eos: 337
   s_upper_flipper_right_eos: 424
-  s_upper_kickout: 33
+  s_upper_kickout: 39
   s_upper_slingshot_right: 46

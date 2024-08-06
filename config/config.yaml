@@ -10,6 +10,7 @@ config:
 modes:
   - base
   - orbit
+  - multiball
 
 game:
   balls_per_game: 3

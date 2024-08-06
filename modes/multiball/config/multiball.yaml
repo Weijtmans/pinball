@@ -1,0 +1,30 @@
+#config_version=6
+##! mode: multiball
+
+mode:
+  start_events: sw_launch_active
+  stop_events: ball_will_end
+  priority: 300
+
+multiball_locks:
+  middle_kickout:
+    lock_devices: bd_middle_kickout
+    balls_to_lock: 1
+    disable_events: mode_multiball_started
+    locked_ball_counting_strategy: physical_only
+    reset_count_for_current_player_events: multiball_tripple_multiball_started
+
+  upper_kickout:
+    lock_devices: bd_upper_kickout
+    balls_to_lock: 1
+    disable_events: mode_multiball_started
+    locked_ball_counting_strategy: physical_only
+    reset_count_for_current_player_events: multiball_tripple_multiball_started
+
+multiballs:
+  tripple_multiball:
+    ball_count: 3
+    ball_count_type: total
+    shoot_again: 2s
+    start_events: multiball_lock_middle_kickout_full
+    ball_locks: bd_middle_kickout, bd_upper_kickout
