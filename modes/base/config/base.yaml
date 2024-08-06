@@ -1,6 +1,9 @@
 #config_version=6
-
 ##! mode: base
+
+mode:
+  start_events: ball_starting
+  priority: 100
 
 variable_player:
   # Slingshots
@@ -9,8 +12,15 @@ variable_player:
   s_slingshot_left_active:
     score: 50
 
-mode:
-  start_events: ball_started
+shots:
+  left_inlane:
+    switch: s_inlane_left
+    show_tokens:
+      light: l_playfield_left_inlane
+  right_inlane:
+    switch: s_inlane_right
+    show_tokens:
+      light: l_playfield_right_inlane
 
 slide_player:
   mode_base_started:
