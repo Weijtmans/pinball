@@ -26,7 +26,6 @@ shots:
     show_tokens:
       light: l_playfield_upper_left_target
   
-  # WORK IN PROGRESS -->
   # Mini playfield
   mini_game_1:
     switch: s_mini_playfield_switch1
@@ -50,7 +49,6 @@ shot_groups:
     shots: mini_game_1, mini_game_2, mini_game_3, mini_game_4
     enable_events: ball_started
     disable_events: ball_ending
-# WORK IN PROGRESS <--
 
 sound_player:
   mode_base_started:
