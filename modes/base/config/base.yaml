@@ -5,6 +5,7 @@ mode:
   start_events: ball_starting
   priority: 100
 
+# Ball save config for the first 10 seconds of the game
 ball_saves:
   default:
     active_time: 10s
@@ -17,6 +18,7 @@ ball_saves:
     balls_to_save: 1
     early_ball_save_events: s_outlane_left_active, s_outlane_right_active
 
+# Scoring for hitting various shots
 variable_player:
   # Slingshots
   s_slingshot_right_active:
@@ -25,16 +27,19 @@ variable_player:
     score: 50
   s_upper_slingshot_right_active:
     score: 50
+  # Kickouts
   s_middle_kickout_active:
     score: 100
   s_upper_kickout_active:
     score: 100
+  # Targets
   s_target_middle_active:
     score: 200
   s_target_right_active:
     score: 200
   s_target_top_active:
     score: 200
+  # Drop targets
   s_drop_target_top1_active:
     score: 50
   s_drop_target_top2_active:
@@ -57,20 +62,24 @@ variable_player:
     score: 50
   s_drop_target_right3_active:
     score: 50
+  # Bumpers
   s_bumper_top_active:
     score: 50
   s_bumper_middle_active:
     score: 50
   s_bumper_right_active:
     score: 50
+  # Orbits
   s_orbit1_active:
     score: 125
   s_orbit2_active:
     score: 125
+  # Inlanes
   s_inlane_left_active:
     score: 100
   s_inlane_right_active:
     score: 100
+  # Completed combos
   mini_game_complete:
     score: 5000
   drop_target_bank_b_bank_top_up:
@@ -80,7 +89,9 @@ variable_player:
   drop_target_bank_b_bank_left_up:
     score: 500
 
+# Shots that can be made on the playfield
 shots:
+  # Inlanes
   left_inlane:
     switch: s_inlane_left
     show_tokens:
@@ -89,11 +100,11 @@ shots:
     switch: s_inlane_right
     show_tokens:
       light: l_playfield_right_inlane
+  # Targets
   top_target:
     switch: s_target_top
     show_tokens:
       light: l_playfield_upper_left_target
-  
   # Mini playfield
   mini_game_1:
     switch: s_mini_playfield_switch1
@@ -112,33 +123,38 @@ shots:
     show_tokens:
       light: l_playfield_mini_game4
 
+# Groups of shots that can be made
 shot_groups:
   mini_game:
     shots: mini_game_1, mini_game_2, mini_game_3, mini_game_4
     enable_events: ball_started
     disable_events: ball_ending
 
+# Sound effects for various events
 sound_player:
+  # Shoot sound (voice)
   mode_base_started:
     shoot_the_ball:
       loops: 0
 
+  # Background music
   sw_launch_active:
-    shoot_the_ball:
-      action: stop
     base_background_music:
       loops: -1
 
+  # Sound (voice) for hitting various shots
   s_target_top_active:
     nice_shot:
       loops: 0
   
+  # Sound (voice) when the ball is drained
   ball_ending:
     that_happens:
       loops: 0
     base_background_music:
       action: stop
   
+  # Sound (voice) when completing a combo
   drop_target_bank_b_bank_top_up:
     got_all:
       loops: 0
@@ -152,10 +168,12 @@ sound_player:
     got_all:
       loops: 0
 
+  # Sound (voice) for ball save
   ball_save_default_saving_ball:
     oof_that_was_close:
       loops: 0
 
+# Visuals for base mode
 slide_player:
   mode_base_started:
     widgets:
@@ -180,6 +198,7 @@ slide_player:
         anchor_y: bottom
         font_size: 50
 
+# Light shows for ball save
 show_player:
   ball_save_default_timer_start:
     ball_save_show:

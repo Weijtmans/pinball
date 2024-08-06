@@ -1,0 +1,28 @@
+#show_version=6
+##! mode: base
+##! show: orbit_show
+
+- duration: 1
+  lights:
+    l_playfield_middle_loop_low1: ff
+    l_playfield_middle_loop_low2: 0
+    l_playfield_middle_loop_up1: 0
+    l_playfield_middle_loop_up2: 0
+- duration: 1
+  lights:
+    l_playfield_middle_loop_low1: 0
+    l_playfield_middle_loop_low2: ff
+    l_playfield_middle_loop_up1: 0
+    l_playfield_middle_loop_up2: 0
+- duration: 1
+  lights:
+    l_playfield_middle_loop_low1: 0
+    l_playfield_middle_loop_low2: 0
+    l_playfield_middle_loop_up1: ff
+    l_playfield_middle_loop_up2: 0
+- duration: 1
+  lights:
+    l_playfield_middle_loop_low1: 0
+    l_playfield_middle_loop_low2: 0
+    l_playfield_middle_loop_up1: 0
+    l_playfield_middle_loop_up2: ff

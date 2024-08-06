@@ -1,0 +1,54 @@
+#config_version=6
+##! mode: orbit
+
+mode:
+  start_events: sw_launch_active
+  stop_events: timer_mode_countdown_complete, orbit_hit
+  priority: 300
+
+# Countdown to end the mode after 20 seconds
+timers:
+  mode_countdown:
+    start_value: 20
+    end_value: 0
+    direction: down
+    start_running: true
+    bcp: true
+
+# Scoring for hitting the orbit
+variable_player:
+  orbit_hit:
+    score: 1000
+
+# Sound effects for hitting the orbit
+sound_player:
+  orbit_hit:
+    amazing_shot:
+      loops: 0
+
+# Visual effects to show the player where to shoot
+slide_player:
+  mode_orbit_started: ramp_text
+
+# Text to display on the screen to show the player where to shoot
+slides:
+  ramp_text:
+  - type: text
+    text: SHOOT THE LEFT RAMP
+    animations:
+      entrance:
+      - property: opacity
+        value: 1
+        duration: 0.3s
+      - property: opacity
+        value: 0
+        duration: 0.3s
+        repeat: true
+
+# Light shows to indicate the orbit shot
+show_player:
+  mode_orbit_started:
+    orbit_show:
+      action: play
+      speed: 5
+      loops: -1
