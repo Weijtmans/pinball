@@ -20,3 +20,7 @@ keyboard:
     switch: s_plunger_lane
   "]":
     switch: s_plunger_lane_exit
+  "z":
+    event: test_event1
+  "x":
+    event: test_event2

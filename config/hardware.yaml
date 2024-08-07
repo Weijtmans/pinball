@@ -27,10 +27,6 @@ fast:
         led_hz: 30
         led_fade_time: 100ms
 
-machine:
-  balls_installed: 2
-  min_balls: 1
-
 playfields:
   playfield:
     tags: default
@@ -351,7 +347,7 @@ flippers:
 ball_devices:
   # Trough
   bd_trough:
-    ball_switches: s_trough1, s_trough2, s_trough_jam
+    ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6, s_trough_jam
     eject_coil: c_trough_eject
     tags: trough, home, drain
     jam_switch: s_trough_jam

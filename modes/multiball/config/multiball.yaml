@@ -4,27 +4,77 @@
 mode:
   start_events: sw_launch_active
   stop_events: ball_will_end
-  priority: 300
+  priority: 500
+
+variable_player:
+  multiball_tripple_multiball_started:
+    score: 5000
 
 multiball_locks:
-  middle_kickout:
-    lock_devices: bd_middle_kickout
-    balls_to_lock: 1
-    disable_events: mode_multiball_started
-    locked_ball_counting_strategy: physical_only
-    reset_count_for_current_player_events: multiball_tripple_multiball_started
-
   upper_kickout:
-    lock_devices: bd_upper_kickout
     balls_to_lock: 1
-    disable_events: mode_multiball_started
-    locked_ball_counting_strategy: physical_only
-    reset_count_for_current_player_events: multiball_tripple_multiball_started
+    lock_devices: bd_upper_kickout
+    locked_ball_counting_strategy: virtual_only
+    enable_events: enable_lock
+    disable_events: disable_lock
+    reset_all_counts_events: multiball_lock_upper_kickout_full
+  
+  middle_kickout:
+    balls_to_lock: 1
+    lock_devices: bd_middle_kickout
+    locked_ball_counting_strategy: virtual_only
+    enable_events: enable_lock
+    disable_events: disable_lock
+    reset_all_counts_events: multiball_lock_middle_kickout_full
 
 multiballs:
   tripple_multiball:
     ball_count: 3
-    ball_count_type: total
-    shoot_again: 2s
-    start_events: multiball_lock_middle_kickout_full
-    ball_locks: bd_middle_kickout, bd_upper_kickout
+    ball_locks: bd_upper_kickout, bd_middle_kickout
+    start_events: start_multiball
+
+state_machines:
+  multiballs:
+    states:
+      start:
+        label: Lock not enabled
+      lock_enabled:
+        label: Lock enabled
+        events_when_started: enable_lock
+        events_when_stopped: disable_lock
+      multiball_running:
+        label: Multiball running
+        events_when_started: start_multiball
+    transitions:
+      - source: start
+        target: lock_enabled
+        events: mode_multiball_started
+      - source: lock_enabled
+        target: multiball_running
+        events: sw_locks_full
+      - source: multiball_running
+        target: start
+        events: multiball_tripple_multiball_ended
+
+accruals:
+  both_locks_full:
+    events:
+      - multiball_lock_upper_kickout_full
+      - multiball_lock_middle_kickout_full
+    events_when_complete: sw_locks_full
+    reset_on_complete: true
+
+sound_player:
+  multiball_tripple_multiball_started:
+    multiball_started:
+      loops: 0
+
+show_player:
+  multiball_tripple_multiball_started:
+    multiball_light_show_spinner:
+      action: play
+      speed: 5
+      loops: -1
+  multiball_tripple_multiball_ended:
+    multiball_light_show_spinner:
+      action: stop
