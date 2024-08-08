@@ -1,60 +1,37 @@
 events:
-  game_ended: 20
-  game_started: 132
+  game_ended: 21
+  game_started: 133
 missing_switches:
-  s_bumper_middle: 74
-  s_bumper_right: 74
-  s_bumper_top: 56
-  s_drop_target_left1: 34
-  s_drop_target_left2: 34
-  s_drop_target_left3: 34
-  s_drop_target_right1: 42
-  s_drop_target_right2: 42
-  s_drop_target_right3: 42
-  s_drop_target_top1: 30
-  s_drop_target_top2: 30
-  s_drop_target_top3: 30
-  s_drop_target_top4: 30
-  s_drop_target_top5: 30
-  s_flipper_left_eos: 74
-  s_flipper_right_eos: 74
-  s_inlane_left: 66
-  s_inlane_right: 66
-  s_launch: 1
+  s_bumper_middle: 75
+  s_drop_target_left1: 35
+  s_drop_target_left2: 35
+  s_drop_target_left3: 35
+  s_drop_target_right1: 43
+  s_drop_target_right2: 43
+  s_drop_target_right3: 43
+  s_flipper_left_eos: 75
+  s_flipper_right_eos: 75
+  s_inlane_left: 67
+  s_inlane_right: 67
   s_launch_button: 1
-  s_left_flipper: 70
-  s_middle_kickout: 1
-  s_mini_playfield_switch1: 31
-  s_mini_playfield_switch2: 31
-  s_mini_playfield_switch3: 31
-  s_mini_playfield_switch4: 31
-  s_orbit1: 1
-  s_orbit2: 1
-  s_outlane_left: 58
-  s_outlane_right: 45
-  s_plunger_lane_exit: 1
-  s_right_flipper: 70
-  s_slingshot_left: 30
-  s_slingshot_right: 30
-  s_start: 43
-  s_target_middle: 74
-  s_target_right: 74
-  s_target_top: 31
-  s_trough1: 1
-  s_trough2: 1
-  s_trough3: 1
-  s_trough4: 69
-  s_trough5: 74
-  s_trough6: 74
-  s_trough_jam: 74
-  s_upper_flipper_left_eos: 74
-  s_upper_flipper_right_eos: 74
-  s_upper_kickout: 1
-  s_upper_slingshot_right: 74
+  s_left_flipper: 71
+  s_outlane_left: 59
+  s_outlane_right: 46
+  s_right_flipper: 71
+  s_start: 44
+  s_target_middle: 75
+  s_trough4: 70
+  s_trough5: 75
+  s_trough6: 75
+  s_trough_jam: 75
+  s_upper_flipper_left_eos: 75
+  s_upper_flipper_right_eos: 75
+  s_upper_slingshot_right: 75
 player:
   score:
-    average: 278
+    average: 931
     top:
+    - 14000
     - 2000
     - 850
     - 750
@@ -64,64 +41,63 @@ player:
     - 300
     - 250
     - 200
-    - 150
-    total: 20
+    total: 21
 shots:
   left_inlane: 16
-  mini_game_1: 8
-  mini_game_2: 8
-  mini_game_3: 9
-  mini_game_4: 13
+  mini_game_1: 9
+  mini_game_2: 9
+  mini_game_3: 10
+  mini_game_4: 14
   right_inlane: 2
-  top_target: 12
+  top_target: 13
 switches:
   s_bumper_middle: 16
-  s_bumper_right: 7
-  s_bumper_top: 16
+  s_bumper_right: 9
+  s_bumper_top: 17
   s_drop_target_left1: 32
   s_drop_target_left2: 20
   s_drop_target_left3: 24
   s_drop_target_right1: 18
   s_drop_target_right2: 15
   s_drop_target_right3: 15
-  s_drop_target_top1: 37
-  s_drop_target_top2: 37
-  s_drop_target_top3: 38
-  s_drop_target_top4: 36
-  s_drop_target_top5: 33
+  s_drop_target_top1: 38
+  s_drop_target_top2: 38
+  s_drop_target_top3: 39
+  s_drop_target_top4: 37
+  s_drop_target_top5: 34
   s_flipper_left_eos: 397
   s_flipper_right_eos: 490
   s_inlane_left: 26
   s_inlane_right: 8
-  s_launch: 77
+  s_launch: 80
   s_launch_button: 130
   s_left_flipper: 738
-  s_middle_kickout: 94
-  s_mini_playfield_switch1: 11
-  s_mini_playfield_switch2: 14
-  s_mini_playfield_switch3: 15
-  s_mini_playfield_switch4: 20
-  s_orbit1: 31
-  s_orbit2: 30
+  s_middle_kickout: 95
+  s_mini_playfield_switch1: 12
+  s_mini_playfield_switch2: 15
+  s_mini_playfield_switch3: 16
+  s_mini_playfield_switch4: 21
+  s_orbit1: 33
+  s_orbit2: 32
   s_outlane_left: 9
   s_outlane_right: 10
-  s_plunger_lane: 283
-  s_plunger_lane_exit: 258
+  s_plunger_lane: 289
+  s_plunger_lane_exit: 264
   s_right_flipper: 743
-  s_slingshot_left: 64
-  s_slingshot_right: 64
+  s_slingshot_left: 69
+  s_slingshot_right: 69
   s_start: 25
   s_target_middle: 68
-  s_target_right: 26
-  s_target_top: 59
-  s_trough1: 200
-  s_trough2: 111
-  s_trough3: 84
+  s_target_right: 28
+  s_target_top: 60
+  s_trough1: 205
+  s_trough2: 112
+  s_trough3: 85
   s_trough4: 71
   s_trough5: 69
   s_trough6: 58
   s_trough_jam: 131
   s_upper_flipper_left_eos: 337
   s_upper_flipper_right_eos: 424
-  s_upper_kickout: 90
+  s_upper_kickout: 91
   s_upper_slingshot_right: 46
