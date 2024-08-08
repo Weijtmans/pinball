@@ -8,7 +8,7 @@
       widgets:
       - type: Text
         text: TIKI RETREAT
-        font_size: 50
+        style: text_large
       transition:
         type: fade
         duration: 500ms
@@ -18,8 +18,8 @@
     awesome_slide:
       widgets:
       - type: text
-        font_size: 20
-        text: "Escape to the Tiki Retreat!\nSip on exotic cocktails, ride thrilling waves,\nexplore the fiery volcano, and unwind at the Tiki bar.\nYour tropical paradise awaits!" 
+        text: "Escape to the Tiki Retreat!\nSip on exotic cocktails, ride thrilling waves,\nexplore the fiery volcano, and unwind at the Tiki bar.\nYour tropical paradise awaits!"
+        style: text_small 
       transition:
         type: push
         duration: 1s

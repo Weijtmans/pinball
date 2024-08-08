@@ -1,47 +1,56 @@
 events:
   game_ended: 20
-  game_started: 131
+  game_started: 132
 missing_switches:
-  s_bumper_middle: 73
-  s_bumper_right: 73
-  s_bumper_top: 55
-  s_drop_target_left1: 33
-  s_drop_target_left2: 33
-  s_drop_target_left3: 33
-  s_drop_target_right1: 41
-  s_drop_target_right2: 41
-  s_drop_target_right3: 41
-  s_drop_target_top1: 29
-  s_drop_target_top2: 29
-  s_drop_target_top3: 29
-  s_drop_target_top4: 29
-  s_drop_target_top5: 29
-  s_flipper_left_eos: 73
-  s_flipper_right_eos: 73
-  s_inlane_left: 65
-  s_inlane_right: 65
+  s_bumper_middle: 74
+  s_bumper_right: 74
+  s_bumper_top: 56
+  s_drop_target_left1: 34
+  s_drop_target_left2: 34
+  s_drop_target_left3: 34
+  s_drop_target_right1: 42
+  s_drop_target_right2: 42
+  s_drop_target_right3: 42
+  s_drop_target_top1: 30
+  s_drop_target_top2: 30
+  s_drop_target_top3: 30
+  s_drop_target_top4: 30
+  s_drop_target_top5: 30
+  s_flipper_left_eos: 74
+  s_flipper_right_eos: 74
+  s_inlane_left: 66
+  s_inlane_right: 66
+  s_launch: 1
   s_launch_button: 1
-  s_left_flipper: 69
-  s_mini_playfield_switch1: 30
-  s_mini_playfield_switch2: 30
-  s_mini_playfield_switch3: 30
-  s_mini_playfield_switch4: 30
-  s_outlane_left: 57
-  s_outlane_right: 44
-  s_right_flipper: 69
-  s_slingshot_left: 29
-  s_slingshot_right: 29
-  s_start: 42
-  s_target_middle: 73
-  s_target_right: 73
-  s_target_top: 30
-  s_trough4: 68
-  s_trough5: 73
-  s_trough6: 73
-  s_trough_jam: 73
-  s_upper_flipper_left_eos: 73
-  s_upper_flipper_right_eos: 73
-  s_upper_slingshot_right: 73
+  s_left_flipper: 70
+  s_middle_kickout: 1
+  s_mini_playfield_switch1: 31
+  s_mini_playfield_switch2: 31
+  s_mini_playfield_switch3: 31
+  s_mini_playfield_switch4: 31
+  s_orbit1: 1
+  s_orbit2: 1
+  s_outlane_left: 58
+  s_outlane_right: 45
+  s_plunger_lane_exit: 1
+  s_right_flipper: 70
+  s_slingshot_left: 30
+  s_slingshot_right: 30
+  s_start: 43
+  s_target_middle: 74
+  s_target_right: 74
+  s_target_top: 31
+  s_trough1: 1
+  s_trough2: 1
+  s_trough3: 1
+  s_trough4: 69
+  s_trough5: 74
+  s_trough6: 74
+  s_trough_jam: 74
+  s_upper_flipper_left_eos: 74
+  s_upper_flipper_right_eos: 74
+  s_upper_kickout: 1
+  s_upper_slingshot_right: 74
 player:
   score:
     average: 278
@@ -96,7 +105,7 @@ switches:
   s_orbit2: 30
   s_outlane_left: 9
   s_outlane_right: 10
-  s_plunger_lane: 282
+  s_plunger_lane: 283
   s_plunger_lane_exit: 258
   s_right_flipper: 743
   s_slingshot_left: 64
