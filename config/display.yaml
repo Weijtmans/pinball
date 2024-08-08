@@ -3,6 +3,8 @@
 displays:
   window:
     default: true
+    width: 1280
+    height: 390
 
 window:
   title: "Tiki Retreat"
@@ -10,5 +12,5 @@ window:
   borderless: false
   fullscreen: false
   source_display: window
-  #width: 1024
-  #height: 786
+  width: 1280
+  height: 390

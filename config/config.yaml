@@ -18,11 +18,11 @@ game:
 
 widget_styles:
   text_default:
-    font_size: 21
+    font_size: 40
     font_name: TropikaIsland-ScriptCasual
   text_small:
-    font_size: 15
+    font_size: 30
     font_name: TropikaIsland-ScriptCasual
   text_large:
-    font_size: 35
+    font_size: 150
     font_name: TropikaIsland-Int
