@@ -264,6 +264,7 @@ drop_targets:
     switch: s_drop_target_top3
     reset_coil: c_drop_target_top3
     knockdown_coil: c_drop_target_top_down
+    knockdown_events: sw_drop_target_top3_down
   d_top_4:
     switch: s_drop_target_top4
     reset_coil: c_drop_target_top4

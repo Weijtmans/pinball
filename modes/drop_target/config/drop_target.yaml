@@ -1,0 +1,119 @@
+#config_version=6
+##! mode: drop_target
+
+mode:
+  start_events: sw_launch_active
+  stop_events: ball_will_end
+  priority: 500
+
+# State machine to manage game progression
+state_machines:
+  drop_sequence:
+    states:
+      start:
+        label: Initial state
+        events_when_started: 
+          - reset_drop_target_bank
+          - debug_start_state
+      stage_1:
+        label: Target 3 up
+        events_when_started: 
+          - reset_drop_target_bank
+          - raise_drop_target_3|500ms
+          - debug_stage_1
+      stage_2:
+        label: Targets 2 and 4 up
+        events_when_started: 
+          - reset_drop_target_bank
+          - raise_drop_targets_2_4|500ms
+          - debug_stage_2
+      stage_3:
+        label: Targets 1, 3, and 5 up
+        events_when_started:
+          - reset_drop_target_bank
+          - raise_drop_targets_1_3_5|500ms
+          - debug_stage_3
+      stage_4:
+        label: Targets 1, 2, 4, and 5 up
+        events_when_started:
+          - reset_drop_target_bank
+          - raise_drop_targets_1_2_4_5|500ms
+          - debug_stage_4
+      complete:
+        label: All targets up
+        events_when_started:
+          - raise_all_drop_targets
+          - drop_sequence_completed
+          - debug_complete
+    transitions:
+      - source: start
+        target: stage_1
+        events: prepare_stage_1
+      - source: stage_1
+        target: stage_2
+        events: d_top_3_down
+      - source: stage_2
+        target: stage_3
+        events: d_top_2_down, d_top_4_down
+      - source: stage_3
+        target: stage_4
+        events: d_top_1_down, d_top_3_down, d_top_5_down
+      - source: stage_4
+        target: complete
+        events: d_top_1_down, d_top_2_down, d_top_4_down, d_top_5_down
+      - source: complete
+        target: start
+        events: drop_sequence_completed
+
+# Event player to handle drop target control
+event_player:
+  mode_drop_target_started: 
+    - reset_drop_target_bank
+    - prepare_stage_1|1s
+  reset_drop_target_bank: sw_drop_target_top3_down
+  raise_drop_target_3: d_top_3_reset
+  raise_drop_targets_2_4:
+    - d_top_2_reset
+    - d_top_4_reset
+  raise_drop_targets_1_3_5:
+    - d_top_1_reset
+    - d_top_3_reset
+    - d_top_5_reset
+  raise_drop_targets_1_2_4_5:
+    - d_top_1_reset
+    - d_top_2_reset
+    - d_top_4_reset
+    - d_top_5_reset
+  raise_all_drop_targets: b_bank_top_reset
+  # Debug events
+  debug_start_state: debug_event_start_state
+  debug_stage_1: debug_event_stage_1
+  debug_stage_2: debug_event_stage_2
+  debug_stage_3: debug_event_stage_3
+  debug_stage_4: debug_event_stage_4
+  debug_complete: debug_event_complete
+
+# Scoring
+variable_player:
+  d_top_3_down{state_machines.drop_sequence.state=="stage_1"}:
+    score: 1000
+  d_top_2_down{state_machines.drop_sequence.state=="stage_2"}:
+    score: 2000
+  d_top_4_down{state_machines.drop_sequence.state=="stage_2"}:
+    score: 2000
+  d_top_1_down{state_machines.drop_sequence.state=="stage_3"}:
+    score: 3000
+  d_top_3_down{state_machines.drop_sequence.state=="stage_3"}:
+    score: 3000
+  d_top_5_down{state_machines.drop_sequence.state=="stage_3"}:
+    score: 3000
+  d_top_1_down{state_machines.drop_sequence.state=="stage_4"}:
+    score: 4000
+  d_top_2_down{state_machines.drop_sequence.state=="stage_4"}:
+    score: 4000
+  d_top_4_down{state_machines.drop_sequence.state=="stage_4"}:
+    score: 4000
+  d_top_5_down{state_machines.drop_sequence.state=="stage_4"}:
+    score: 4000
+  drop_sequence_completed:
+    score: 10000
