@@ -15,3 +15,14 @@ modes:
 game:
   balls_per_game: 3
   max_players: 4
+
+widget_styles:
+  text_default:
+    font_size: 21
+    font_name: TropikaIsland-ScriptCasual
+  text_small:
+    font_size: 15
+    font_name: TropikaIsland-ScriptCasual
+  text_large:
+    font_size: 35
+    font_name: TropikaIsland-Int
