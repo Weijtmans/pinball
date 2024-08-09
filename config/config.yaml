@@ -9,8 +9,8 @@ config:
 
 modes:
   - base
-  # - orbit
-  # - multiball
+  - orbit
+  - multiball
   # - drop_target
 
 game:
