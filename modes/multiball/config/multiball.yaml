@@ -51,7 +51,7 @@ state_machines:
         events: mode_multiball_started
       - source: lock_enabled
         target: multiball_running
-        events: sw_locks_full
+        events: cmd_locks_full
       - source: multiball_running
         target: start
         events: multiball_tripple_multiball_ended
@@ -61,7 +61,7 @@ accruals:
     events:
       - multiball_lock_upper_kickout_full
       - multiball_lock_middle_kickout_full
-    events_when_complete: sw_locks_full
+    events_when_complete: cmd_locks_full
     reset_on_complete: true
 
 sound_player:

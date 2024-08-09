@@ -16,6 +16,8 @@ keyboard:
     toggle: true
   "s":
     switch: s_start
+  "a":
+    switch: s_launch
   "[":
     switch: s_plunger_lane
   "]":
