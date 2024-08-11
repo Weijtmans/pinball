@@ -1,0 +1,12 @@
+// Ignore all log files
+/logs/*.log
+
+__pycache__/
+*.py[cod]
+__mpfcache__
+.idea
+logs
+data
+*.egg-info
+.DS_Store
+.vscode
