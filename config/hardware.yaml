@@ -259,34 +259,24 @@ coils:
 drop_targets:
   d_top_1:
     switch: s_drop_target_top1
-    reset_coil: c_drop_target_top1
-    reset_events: ball_starting, machine_reset_phase_3, cmd_drop_target_top_1_reset
-    knockdown_coil: c_drop_target_top_down
+    knockdown_coil: c_drop_target_top1
     knockdown_events: cmd_drop_target_top_1_knockdown
   d_top_2:
     switch: s_drop_target_top2
-    reset_coil: c_drop_target_top2
-    reset_events: ball_starting, machine_reset_phase_3, cmd_drop_target_top_2_reset
-    knockdown_coil: c_drop_target_top_down
+    knockdown_coil: c_drop_target_top2
     knockdown_events: cmd_drop_target_top_2_knockdown
   d_top_3:
     switch: s_drop_target_top3
-    reset_coil: c_drop_target_top3
-    reset_events: ball_starting, machine_reset_phase_3, cmd_drop_target_top_3_reset
-    knockdown_coil: c_drop_target_top_down
+    knockdown_coil: c_drop_target_top3
     knockdown_events: cmd_drop_target_top_3_knockdown
   d_top_4:
     switch: s_drop_target_top4
-    reset_coil: c_drop_target_top4
-    reset_events: ball_starting, machine_reset_phase_3, cmd_drop_target_top_4_reset
-    knockdown_coil: c_drop_target_top_down
-    knockdown_events: beer
+    knockdown_coil: c_drop_target_top4
+    knockdown_events: cmd_drop_target_top_4_knockdown
   d_top_5:
     switch: s_drop_target_top5
-    reset_coil: c_drop_target_top5
-    reset_events: ball_starting, machine_reset_phase_3, cmd_drop_target_top_5_reset
-    knockdown_coil: c_drop_target_top_down
-    knockdown_events: panda
+    knockdown_coil: c_drop_target_top5
+    knockdown_events: cmd_drop_target_top_5_knockdown
   d_left_1:
     switch: s_drop_target_left1
     reset_coil: c_drop_target_left_reset
@@ -314,9 +304,8 @@ sequence_shots:
 drop_target_banks:
   b_bank_top:
     drop_targets: d_top_1, d_top_2, d_top_3, d_top_4, d_top_5
-    reset_coils: c_drop_target_top1, c_drop_target_top2, c_drop_target_top3, c_drop_target_top4, c_drop_target_top5
-    reset_events: cmd_drop_target_top_reset
-    reset_on_complete: 1s
+    reset_coils: c_drop_target_top_down
+    reset_events: machine_reset_phase_3, ball_starting, cmd_drop_target_bank_top_reset
   b_bank_left:
     drop_targets: d_left_1, d_left_2, d_left_3
     reset_coils: c_drop_target_left_reset

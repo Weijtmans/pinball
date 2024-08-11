@@ -1,6 +1,14 @@
 #config_version=6
 ##! mode: drop_target
 
+# NOTES:
+# In MPF you can only reset a bank with a single coil and individually knock down targets with separate coils
+# We want to achieve the exact opposite, so we are using a workaround
+# - cmd_knock_down_bank: triggers bank reset
+# - cmd_drop_target_top_1_reset: triggers drop target knockdown
+# The switches are reversed in software, so the switch is active when the target is up
+# So we are programming everything in reverse as a workaround to make it work
+
 mode:
   start_events: sw_launch_active
   stop_events: ball_will_end
@@ -13,89 +21,81 @@ state_machines:
       start:
         label: Initial state
         events_when_started: 
-          - cmd_knock_down_drop_target_bank
+          - cmd_drop_target_bank_top_reset
       stage_1:
         label: Target 3 up
         events_when_started: 
-          - cmd_drop_target_top_3_reset|500ms
+          - cmd_drop_target_top_3_knockdown
       stage_2:
         label: Targets 2 and 4 up
         events_when_started: 
-          - cmd_reset_drop_targets_2_4|500ms
+          - cmd_drop_target_top_2_knockdown
+          - cmd_drop_target_top_4_knockdown
       stage_3:
         label: Targets 1, 3, and 5 up
         events_when_started:
-          - cmd_reset_drop_targets_1_3_5|500ms
+          - cmd_drop_target_top_1_knockdown
+          - cmd_drop_target_top_3_knockdown
+          - cmd_drop_target_top_5_knockdown
       stage_4:
         label: Targets 1, 2, 4, and 5 up
         events_when_started:
-          - cmd_reset_drop_targets_1_2_4_5|500ms
+          - cmd_drop_target_top_1_knockdown
+          - cmd_drop_target_top_2_knockdown
+          - cmd_drop_target_top_4_knockdown
+          - cmd_drop_target_top_5_knockdown
       complete:
         label: All targets up
         events_when_started:
-          - cmd_reset_drop_target_bank
-          - cmd_drop_sequence_completed
+          - cmd_drop_target_top_1_knockdown
+          - cmd_drop_target_top_2_knockdown
+          - cmd_drop_target_top_3_knockdown
+          - cmd_drop_target_top_4_knockdown
+          - cmd_drop_target_top_5_knockdown
     transitions:
       - source: start
         target: stage_1
         events: prepare_stage_1
       - source: stage_1
         target: stage_2
-        events: drop_target_d_top_3_down
+        events: drop_target_d_top_3_up
       - source: stage_2
         target: stage_3
-        events: drop_target_d_top_2_down, drop_target_d_top_4_down
+        events: drop_target_d_top_2_up, drop_target_d_top_4_up
       - source: stage_3
         target: stage_4
-        events: drop_target_d_top_1_down, drop_target_d_top_3_down, drop_target_d_top_5_down
+        events: drop_target_d_top_1_up, drop_target_d_top_3_up, drop_target_d_top_5_up
       - source: stage_4
         target: complete
-        events: drop_target_d_top_1_down, drop_target_d_top_2_down, drop_target_d_top_4_down, drop_target_d_top_5_down
+        events: drop_target_d_top_1_up, drop_target_d_top_2_up, drop_target_d_top_4_up, drop_target_d_top_5_up
       - source: complete
         target: start
-        events: drop_target_d_top_1_down, drop_target_d_top_2_down, drop_target_d_top_3_down, drop_target_d_top_4_down, drop_target_d_top_5_down
+        events: drop_target_d_top_1_up, drop_target_d_top_2_up, drop_target_d_top_3_up, drop_target_d_top_4_up, drop_target_d_top_5_up
 
 # Event player to handle drop target control
 event_player:
   mode_drop_target_started: 
-    - cmd_knock_down_drop_target_bank
-    - prepare_stage_1|1s
-  cmd_reset_drop_target_bank: cmd_drop_target_top_1_reset, cmd_drop_target_top_2_reset, cmd_drop_target_top_3_reset, cmd_drop_target_top_4_reset, cmd_drop_target_top_5_reset
-  cmd_knock_down_drop_target_bank: cmd_drop_target_top_1_knockdown, cmd_drop_target_top_2_knockdown, cmd_drop_target_top_3_knockdown, cmd_drop_target_top_4_knockdown, cmd_drop_target_top_5_knockdown
-  cmd_reset_drop_targets_2_4:
-    - cmd_drop_target_top_2_reset
-    - cmd_drop_target_top_4_reset
-  cmd_reset_drop_targets_1_3_5:
-    - cmd_drop_target_top_1_reset
-    - cmd_drop_target_top_3_reset
-    - cmd_drop_target_top_5_reset
-  cmd_reset_drop_targets_1_2_4_5:
-    - cmd_drop_target_top_1_reset
-    - cmd_drop_target_top_2_reset
-    - cmd_drop_target_top_4_reset
-    - cmd_drop_target_top_5_reset
+    - prepare_stage_1
 
 # Scoring
 variable_player:
-  drop_target_d_top_3_down{state_machines.drop_sequence.state=="stage_1"}:
+  drop_target_d_top_3_up{state_machines.drop_sequence.state=="stage_1"}:
     score: 1000
-  drop_target_d_top_2_down{state_machines.drop_sequence.state=="stage_2"}:
+  drop_target_d_top_2_up{state_machines.drop_sequence.state=="stage_2"}:
     score: 2000
-  drop_target_d_top_4_down{state_machines.drop_sequence.state=="stage_2"}:
+  drop_target_d_top_4_up{state_machines.drop_sequence.state=="stage_2"}:
     score: 2000
-  drop_target_d_top_1_down{state_machines.drop_sequence.state=="stage_3"}:
+  drop_target_d_top_1_up{state_machines.drop_sequence.state=="stage_3"}:
     score: 3000
-  drop_target_d_top_3_down{state_machines.drop_sequence.state=="stage_3"}:
+  drop_target_d_top_3_up{state_machines.drop_sequence.state=="stage_3"}:
     score: 3000
-  drop_target_d_top_5_down{state_machines.drop_sequence.state=="stage_3"}:
+  drop_target_d_top_5_up{state_machines.drop_sequence.state=="stage_3"}:
     score: 3000
-  drop_target_d_top_1_down{state_machines.drop_sequence.state=="stage_4"}:
+  drop_target_d_top_1_up{state_machines.drop_sequence.state=="stage_4"}:
     score: 4000
-  drop_target_d_top_2_down{state_machines.drop_sequence.state=="stage_4"}:
+  drop_target_d_top_2_up{state_machines.drop_sequence.state=="stage_4"}:
     score: 4000
-  drop_target_d_top_4_down{state_machines.drop_sequence.state=="stage_4"}:
+  drop_target_d_top_4_up{state_machines.drop_sequence.state=="stage_4"}:
     score: 4000
-  drop_target_d_top_5_down{state_machines.drop_sequence.state=="stage_4"}:
+  drop_target_d_top_5_up{state_machines.drop_sequence.state=="stage_4"}:
     score: 4000
-  cmd_drop_sequence_completed:
-    score: 10000
