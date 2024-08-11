@@ -44,7 +44,7 @@ state_machines:
           - cmd_drop_target_top_2_knockdown
           - cmd_drop_target_top_4_knockdown
           - cmd_drop_target_top_5_knockdown
-      complete:
+      stage_5:
         label: All targets up
         events_when_started:
           - cmd_drop_target_top_1_knockdown
@@ -52,6 +52,10 @@ state_machines:
           - cmd_drop_target_top_3_knockdown
           - cmd_drop_target_top_4_knockdown
           - cmd_drop_target_top_5_knockdown
+      complete:
+        label: All targets hit
+        events_when_started: 
+          - cmd_drop_target_bank_top_reset
     transitions:
       - source: start
         target: stage_1
@@ -61,21 +65,56 @@ state_machines:
         events: drop_target_d_top_3_up
       - source: stage_2
         target: stage_3
-        events: drop_target_d_top_2_up, drop_target_d_top_4_up
+        events: cmd_2_and_4_up
       - source: stage_3
         target: stage_4
-        events: drop_target_d_top_1_up, drop_target_d_top_3_up, drop_target_d_top_5_up
+        events: cmd_1_3_and_5_up
       - source: stage_4
-        target: complete
-        events: drop_target_d_top_1_up, drop_target_d_top_2_up, drop_target_d_top_4_up, drop_target_d_top_5_up
+        target: stage_5
+        events: cmd_1_2_4_and_5_up
+      - source: stage_5
+        target: start
+        events: cmd_all_up
       - source: complete
         target: start
-        events: drop_target_d_top_1_up, drop_target_d_top_2_up, drop_target_d_top_3_up, drop_target_d_top_4_up, drop_target_d_top_5_up
+        events: cmd_test_event_1
 
 # Event player to handle drop target control
 event_player:
   mode_drop_target_started: 
     - prepare_stage_1
+
+accruals:
+  2_and_4_up:
+    events:
+      - drop_target_d_top_2_up
+      - drop_target_d_top_4_up
+    events_when_complete: cmd_2_and_4_up
+    reset_on_complete: true
+  1_3_and_5_up:
+    events:
+      - drop_target_d_top_1_up
+      - drop_target_d_top_3_up
+      - drop_target_d_top_5_up
+    events_when_complete: cmd_1_3_and_5_up
+    reset_on_complete: true
+  1_2_4_and_5_up:
+    events:
+      - drop_target_d_top_1_up
+      - drop_target_d_top_2_up
+      - drop_target_d_top_4_up
+      - drop_target_d_top_5_up
+    events_when_complete: cmd_1_2_4_and_5_up
+    reset_on_complete: true
+  all_up:
+    events:
+      - drop_target_d_top_1_up
+      - drop_target_d_top_2_up
+      - drop_target_d_top_3_up
+      - drop_target_d_top_4_up
+      - drop_target_d_top_5_up
+    events_when_complete: cmd_all_up
+    reset_on_complete: true
 
 # Scoring
 variable_player:
