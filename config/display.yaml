@@ -2,15 +2,9 @@
 
 displays:
   window:
+    width: 800
+    height: 600
+  dmd:
+    width: 120
+    height: 90
     default: true
-    width: 1280
-    height: 390
-
-window:
-  title: "Tiki Retreat"
-  exit_on_escape: true
-  borderless: false
-  fullscreen: false
-  source_display: window
-  width: 1280
-  height: 390

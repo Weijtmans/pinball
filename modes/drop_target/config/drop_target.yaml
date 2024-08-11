@@ -17,7 +17,7 @@ state_machines:
       stage_1:
         label: Target 3 up
         events_when_started: 
-          - cmd_reset_drop_target_3|500ms
+          - cmd_drop_target_top_3_reset|500ms
       stage_2:
         label: Targets 2 and 4 up
         events_when_started: 
@@ -33,7 +33,7 @@ state_machines:
       complete:
         label: All targets up
         events_when_started:
-          - cmd_drop_target_top_reset
+          - cmd_reset_drop_target_bank
           - cmd_drop_sequence_completed
     transitions:
       - source: start
@@ -53,49 +53,49 @@ state_machines:
         events: drop_target_d_top_1_down, drop_target_d_top_2_down, drop_target_d_top_4_down, drop_target_d_top_5_down
       - source: complete
         target: start
-        events: drop_target_bank_b_bank_top_up
+        events: drop_target_d_top_1_down, drop_target_d_top_2_down, drop_target_d_top_3_down, drop_target_d_top_4_down, drop_target_d_top_5_down
 
 # Event player to handle drop target control
 event_player:
   mode_drop_target_started: 
     - cmd_knock_down_drop_target_bank
     - prepare_stage_1|1s
-  cmd_knock_down_drop_target_bank: cmd_drop_target_top_down
-  cmd_reset_drop_target_3: d_top_1_reset
+  cmd_reset_drop_target_bank: cmd_drop_target_top_1_reset, cmd_drop_target_top_2_reset, cmd_drop_target_top_3_reset, cmd_drop_target_top_4_reset, cmd_drop_target_top_5_reset
+  cmd_knock_down_drop_target_bank: cmd_drop_target_top_1_knockdown, cmd_drop_target_top_2_knockdown, cmd_drop_target_top_3_knockdown, cmd_drop_target_top_4_knockdown, cmd_drop_target_top_5_knockdown
   cmd_reset_drop_targets_2_4:
-    - drop_target_d_top_2_reset
-    - drop_target_d_top_4_reset
+    - cmd_drop_target_top_2_reset
+    - cmd_drop_target_top_4_reset
   cmd_reset_drop_targets_1_3_5:
-    - drop_target_d_top_1_reset
-    - drop_target_d_top_3_reset
-    - drop_target_d_top_5_reset
+    - cmd_drop_target_top_1_reset
+    - cmd_drop_target_top_3_reset
+    - cmd_drop_target_top_5_reset
   cmd_reset_drop_targets_1_2_4_5:
-    - drop_target_d_top_1_reset
-    - drop_target_d_top_2_reset
-    - drop_target_d_top_4_reset
-    - drop_target_d_top_5_reset
+    - cmd_drop_target_top_1_reset
+    - cmd_drop_target_top_2_reset
+    - cmd_drop_target_top_4_reset
+    - cmd_drop_target_top_5_reset
 
 # Scoring
 variable_player:
-  d_top_3_down{state_machines.drop_sequence.state=="stage_1"}:
+  drop_target_d_top_3_down{state_machines.drop_sequence.state=="stage_1"}:
     score: 1000
-  d_top_2_down{state_machines.drop_sequence.state=="stage_2"}:
+  drop_target_d_top_2_down{state_machines.drop_sequence.state=="stage_2"}:
     score: 2000
-  d_top_4_down{state_machines.drop_sequence.state=="stage_2"}:
+  drop_target_d_top_4_down{state_machines.drop_sequence.state=="stage_2"}:
     score: 2000
-  d_top_1_down{state_machines.drop_sequence.state=="stage_3"}:
+  drop_target_d_top_1_down{state_machines.drop_sequence.state=="stage_3"}:
     score: 3000
-  d_top_3_down{state_machines.drop_sequence.state=="stage_3"}:
+  drop_target_d_top_3_down{state_machines.drop_sequence.state=="stage_3"}:
     score: 3000
-  d_top_5_down{state_machines.drop_sequence.state=="stage_3"}:
+  drop_target_d_top_5_down{state_machines.drop_sequence.state=="stage_3"}:
     score: 3000
-  d_top_1_down{state_machines.drop_sequence.state=="stage_4"}:
+  drop_target_d_top_1_down{state_machines.drop_sequence.state=="stage_4"}:
     score: 4000
-  d_top_2_down{state_machines.drop_sequence.state=="stage_4"}:
+  drop_target_d_top_2_down{state_machines.drop_sequence.state=="stage_4"}:
     score: 4000
-  d_top_4_down{state_machines.drop_sequence.state=="stage_4"}:
+  drop_target_d_top_4_down{state_machines.drop_sequence.state=="stage_4"}:
     score: 4000
-  d_top_5_down{state_machines.drop_sequence.state=="stage_4"}:
+  drop_target_d_top_5_down{state_machines.drop_sequence.state=="stage_4"}:
     score: 4000
   cmd_drop_sequence_completed:
     score: 10000

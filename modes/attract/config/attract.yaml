@@ -3,9 +3,40 @@
 
 show_player:
   mode_attract_started:
-    attract_display_loop:
-      speed: 1
     attract_light_show_spinner:
       speed: 10
     attract_light_show_top:
       speed: 10
+
+slides:
+  window_slide:
+    - type: display
+      effects:
+        - type: color_dmd
+          dot_size: .5
+      width: 800
+      height: 600
+  dmd_slide:
+    - type: Text
+      text: TIKI RETREAT
+      style: text_large
+      font_size: 20
+    - type: rectangle
+      width: 120
+      height: 30
+      color: white
+      y: 0
+      anchor_y: bottom
+    - type: rectangle
+      width: 120
+      height: 30
+      color: white
+      y: top
+      anchor_y: top
+
+slide_player:
+  mode_attract_started:
+    window_slide:
+      target: window
+    dmd_slide:
+      target: dmd

@@ -23,6 +23,10 @@ keyboard:
   "]":
     switch: s_plunger_lane_exit
   "z":
-    event: test_event1
+    event: cmd_drop_target_top_5_reset
   "x":
-    event: test_event2
+    event: beer
+  "c":
+    event: cmd_drop_target_top_4_reset
+  "v":
+    event: drop_target_d_top_4_down
