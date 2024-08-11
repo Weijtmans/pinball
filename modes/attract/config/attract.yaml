@@ -13,26 +13,14 @@ slides:
     - type: display
       effects:
         - type: color_dmd
-          dot_size: .5
-      width: 800
-      height: 600
+          dot_size: 0.5
+      width: 1280
+      height: 390
   dmd_slide:
     - type: Text
       text: TIKI RETREAT
       style: text_large
-      font_size: 20
-    - type: rectangle
-      width: 120
-      height: 30
-      color: white
-      y: 0
-      anchor_y: bottom
-    - type: rectangle
-      width: 120
-      height: 30
-      color: white
-      y: top
-      anchor_y: top
+      font_size: 200
 
 slide_player:
   mode_attract_started:

@@ -2,9 +2,9 @@
 
 displays:
   window:
-    width: 800
-    height: 600
+    width: 1280
+    height: 390
   dmd:
-    width: 120
-    height: 90
+    width: 1280
+    height: 390
     default: true

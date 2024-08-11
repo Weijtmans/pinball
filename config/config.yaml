@@ -8,10 +8,10 @@ config:
   - audio.yaml
 
 modes:
-  #- base
-  #- orbit
-  #- multiball
-  - drop_target
+  - base
+  - orbit
+  - multiball
+  #- drop_target
 
 game:
   balls_per_game: 3
