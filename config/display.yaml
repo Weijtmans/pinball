@@ -4,7 +4,14 @@ displays:
   window:
     width: 1280
     height: 390
-  dmd:
-    width: 1280
-    height: 390
     default: true
+
+window:
+  width: 1280
+  height: 390
+  title: Tiki Retreat
+  resizable: true
+  borderless: false
+  fullscreen: false
+  exit_on_escape: true
+  source_display: window
