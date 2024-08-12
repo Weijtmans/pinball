@@ -8,7 +8,7 @@ idna==3.7
 Kivy==2.2.1
 Kivy-Garden==0.1.5
 mpf==0.57.2
-mpf-language-server==0.54.2
+-e git+https://github.com/Weijtmans/pinball.git@90d7cca4c3116369f12a9f45c76e295f7f965354#egg=mpf_language_server&subdirectory=mpf-ls
 mpf-mc==0.57.0
 mpf-monitor==0.57.1
 packaging==23.2
