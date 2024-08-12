@@ -83,11 +83,9 @@ variable_player:
   # Completed combos
   mini_game_complete:
     score: 5000
-  drop_target_bank_b_bank_top_up:
-    score: 1000
-  drop_target_bank_b_bank_right_up:
+  drop_target_bank_b_bank_right_down:
     score: 500
-  drop_target_bank_b_bank_left_up:
+  drop_target_bank_b_bank_left_down:
     score: 500
 
 # Shots that can be made on the playfield
@@ -106,6 +104,19 @@ shots:
     switch: s_target_top
     show_tokens:
       light: l_playfield_upper_left_target
+  middle_target:
+    switch: s_target_middle
+    show_tokens:
+      light: l_playfield_middle_loop_target
+  right_target:
+    switch: s_target_right
+    show_tokens:
+      light: l_playfield_right_of_arrow2
+  bumper_middle:
+    switch: s_bumper_middle
+    show_tokens:
+      light: l_playfield_above_arrow
+  
   # Mini playfield
   mini_game_1:
     switch: s_mini_playfield_switch1
@@ -156,13 +167,10 @@ sound_player:
       action: stop
   
   # Sound (voice) when completing a combo
-  drop_target_bank_b_bank_top_up:
+  drop_target_bank_b_bank_right_down:
     got_all:
       loops: 0
-  drop_target_bank_b_bank_right_up:
-    got_all:
-      loops: 0
-  drop_target_bank_b_bank_left_up:
+  drop_target_bank_b_bank_left_down:
     got_all:
       loops: 0
   mini_game_complete:

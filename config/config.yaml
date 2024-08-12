@@ -11,7 +11,7 @@ modes:
   - base
   - orbit
   - multiball
-  #- drop_target
+  - drop_target
 
 game:
   balls_per_game: 3

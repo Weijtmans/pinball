@@ -9,7 +9,7 @@ mode:
 # Countdown to end the mode after 20 seconds
 timers:
   mode_countdown:
-    start_value: 20
+    start_value: 5
     end_value: 0
     direction: down
     start_running: true

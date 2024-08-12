@@ -18,5 +18,3 @@ keyboard:
     switch: s_start
   "a":
     switch: s_launch
-  "z":
-    switch: prepare_stage_1

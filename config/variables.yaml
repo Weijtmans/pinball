@@ -1,0 +1,5 @@
+#config_version=6
+
+player_vars:
+  drop_target_stage: 0
+  value_type: int

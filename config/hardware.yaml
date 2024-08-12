@@ -111,14 +111,19 @@ switches:
   # Drop targets
   s_drop_target_top1:
     number: 1616-9
+    type: NC
   s_drop_target_top2:
     number: 1616-10
+    type: NC
   s_drop_target_top3:
     number: 1616-11
+    type: NC
   s_drop_target_top4:
     number: 1616-12
+    type: NC
   s_drop_target_top5:
     number: 1616-8
+    type: NC
   s_drop_target_left1:
     number: 3208-18
   s_drop_target_left2:

@@ -225,6 +225,7 @@ switch:
   s_drop_target_left1:
     rotation: 10
     shape: RECTANGLE
+    size: 0.04
     x: 0.08611652671058612
     y: 0.5617760617760619
   s_drop_target_left2:
@@ -235,6 +236,7 @@ switch:
   s_drop_target_left3:
     rotation: 10
     shape: RECTANGLE
+    size: 0.04
     x: 0.10213820609860214
     y: 0.5057915057915058
   s_drop_target_right1:
@@ -243,6 +245,7 @@ switch:
     y: 0.47200772200772206
   s_drop_target_right2:
     shape: RECTANGLE
+    size: 0.04
     x: 0.8050893892478052
     y: 0.500965250965251
   s_drop_target_right3:
@@ -376,6 +379,7 @@ switch:
   s_target_right:
     rotation: 40
     shape: RECTANGLE
+    size: 0.04
     x: 0.6328563358266328
     y: 0.48841698841698844
   s_target_top:
