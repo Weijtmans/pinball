@@ -26,7 +26,7 @@ fast:
         model: FP-EXP-0071
         led_hz: 30
         led_fade_time: 100ms
-
+  
 playfields:
   playfield:
     tags: default
