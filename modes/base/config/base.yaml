@@ -6,6 +6,10 @@ mode:
   priority: 100
   restart_on_next_ball: true
 
+event_player:
+  multiplayer_game: player_1_multiplayer_slide
+  player_1_ball_started: player_1_multiplayer_slide
+
 # Ball save config for the first 10 seconds of the game
 ball_saves:
   default:
@@ -184,28 +188,191 @@ sound_player:
 
 # Visuals for base mode
 slide_player:
-  mode_base_started:
-    widgets:
-      widgets:
-      - type: text
-        text: (score)
-        number_grouping: true
-        min_digits: 2
-        font_size: 100
-      - type: text
-        text: PLAYER (number)
-        y: 10
-        x: 10
-        font_size: 50
-        anchor_x: left
-        anchor_y: bottom
-      - type: text
-        text: BALL (ball)
-        y: 10
-        x: right-10
-        anchor_x: right
-        anchor_y: bottom
-        font_size: 50
+  single_player_ball_started: player_1_single_player_slide
+  player_1_multiplayer_slide: player_1_multiplayer_slide
+  player_2_ball_started: player_2_ball_slide
+  player_3_ball_started: player_3_ball_slide
+  player_4_ball_started: player_4_ball_slide
+
+slides:
+  player_1_single_player_slide:
+  - type: text
+    text: (player1|score)
+    style: text_large
+    number_grouping: true
+    min_digits: 2
+    y: middle+10
+  - type: text
+    text: BALL (player1|ball)    (machine|credits_string)
+    anchor_y: bottom
+    y: bottom+1
+
+  player_1_multiplayer_slide:
+  - type: text
+    text: (player1|score)
+    style: text_large
+    number_grouping: true
+    min_digits: 2
+    y: middle+10
+  - type: text
+    text: (player2|score)
+    style: text_small
+    anchor_y: top
+    anchor_x: right
+    halign: right
+    number_grouping: true
+    min_digits: 2
+    x: right-50
+    y: top-25
+  - type: text
+    text: (player3|score)
+    style: text_small
+    anchor_y: bottom
+    anchor_x: left
+    halign: left
+    y: bottom+25
+    x: left+50
+    number_grouping: true
+    min_digits: 2
+  - type: text
+    text: (player4|score)
+    style: text_small
+    anchor_y: bottom
+    anchor_x: right
+    halign: right
+    y: bottom+25
+    x: right-50
+    number_grouping: true
+    min_digits: 2
+  - type: text
+    text: PLAYER (number)    BALL (player1|ball)    (machine|credits_string)
+    anchor_y: bottom
+    y: bottom+1
+
+  player_2_ball_slide:
+  - type: text
+    text: (player1|score)
+    style: text_small
+    anchor_y: top
+    anchor_x: left
+    halign: left
+    number_grouping: true
+    min_digits: 2
+    x: left+50
+    y: top-25
+  - type: text
+    text: (player2|score)
+    style: text_large
+    number_grouping: true
+    min_digits: 2
+    y: middle+10
+  - type: text
+    text: (player3|score)
+    style: text_small
+    anchor_y: bottom
+    anchor_x: left
+    halign: left
+    y: bottom+25
+    x: left+50
+    number_grouping: true
+    min_digits: 2
+  - type: text
+    text: (player4|score)
+    style: text_small
+    anchor_y: bottom
+    anchor_x: right
+    halign: right
+    y: bottom+25
+    x: right-50
+    number_grouping: true
+    min_digits: 2
+  - type: text
+    text: PLAYER (number)    BALL (player1|ball)    (machine|credits_string)
+    anchor_y: bottom
+    y: bottom+1
+
+  player_3_ball_slide:
+  - type: text
+    text: (player1|score)
+    style: text_small
+    anchor_y: top
+    anchor_x: left
+    halign: left
+    number_grouping: true
+    min_digits: 2
+    x: left+50
+    y: top-25
+  - type: text
+    text: (player2|score)
+    anchor_y: top
+    anchor_x: right
+    halign: right
+    number_grouping: true
+    min_digits: 2
+    x: right+50
+    y: top-25
+  - type: text
+    text: (player3|score)
+    style: text_large
+    number_grouping: true
+    min_digits: 2
+    y: middle+10
+  - type: text
+    text: (player4|score)
+    style: text_small
+    anchor_y: bottom
+    anchor_x: right
+    halign: right
+    y: bottom+25
+    x: right-50
+    number_grouping: true
+    min_digits: 2
+  - type: text
+    text: PLAYER (number)    BALL (player1|ball)    (machine|credits_string)
+    anchor_y: bottom
+    y: bottom+1
+
+  player_4_ball_slide:
+  - type: text
+    text: (player1|score)
+    style: text_small
+    anchor_y: top
+    anchor_x: left
+    halign: left
+    number_grouping: true
+    min_digits: 2
+    x: left+50
+    y: top-25
+  - type: text
+    text: (player2|score)
+    style: text_small
+    anchor_y: top
+    anchor_x: right
+    halign: right
+    number_grouping: true
+    min_digits: 2
+    x: right+50
+    y: top-25
+  - type: text
+    text: (player3|score)
+    style: text_small
+    anchor_y: bottom
+    anchor_x: left
+    halign: left
+    y: bottom+25
+    x: left+50
+    number_grouping: true
+    min_digits: 2
+  - type: text
+    style: text_large
+    text: (player4|score)
+    number_grouping: true
+    min_digits: 2
+    y: middle+10
+  - type: text
+    text: PLAYER (number)    BALL (player1|ball)    (machine|credits_string)
+    anchor_y: bottom
+    y: bottom+1
 
 # Light shows for ball save
 show_player:

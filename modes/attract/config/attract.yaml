@@ -9,3 +9,10 @@ show_player:
       speed: 10
     attract_light_show_top:
       speed: 10
+  mode_attract_stopped:
+    attract_display_loop:
+      action: stop
+    attract_light_show_spinner:
+      action: stop
+    attract_light_show_top:
+      action: stop

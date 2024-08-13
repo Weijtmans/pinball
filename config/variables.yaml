@@ -4,6 +4,10 @@ player_vars:
   drop_target_stage: 0
   value_type: int
 
+machine_vars:
+  master_volume:
+    initial_value: 1
+
 variable_player:
   increase_main_volume:
     fast_audio_main_volume:

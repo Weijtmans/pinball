@@ -391,7 +391,6 @@ ball_devices:
     eject_coil_jam_pulse: 15ms
     eject_targets: bd_plunger
     eject_timeouts: 3s
-    debug: true
   # Plunger
   bd_plunger:
     ball_switches: s_plunger_lane
@@ -400,6 +399,7 @@ ball_devices:
     confirm_eject_type: switch
     confirm_eject_switch: s_plunger_lane_exit
     eject_timeouts: 3s
+    mechanical_eject: true
   # Scoops
   bd_middle_kickout:
     eject_coil: c_middle_kickout
