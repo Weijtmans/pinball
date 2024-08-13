@@ -18,7 +18,3 @@ keyboard:
     switch: s_start
   "a":
     switch: s_launch
-  "=":
-    event: increase_main_volume
-  "-":
-    event: decrease_main_volume

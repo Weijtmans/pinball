@@ -1,0 +1,18 @@
+#config_version=6
+
+credits:
+  max_credits: 12
+  free_play: false
+  #service_credits_switch: s_service_credit
+  #switches:
+  #- switch: s_insert_coin
+  #  value: 1
+  #  type: money
+  pricing_tiers:
+  - price: 1
+    credits: 1
+  fractional_credit_expiration_time: 15m
+  credit_expiration_time: 2h
+  persist_credits_while_off_time: 1h
+  free_play_string: FREE PLAY
+  credits_string: CREDITS

@@ -1,0 +1,39 @@
+#config_version=6
+##! mode: credits
+
+slide_player:
+  credits_added: credits_added_slide
+  not_enough_credits: not_enough_credits_slide
+  enabling_free_play: enabling_free_play_slide
+  enabling_credit_play: enabling_credit_play_slide
+
+slides:
+  credits_added_slide:
+    widgets:
+      - type: text
+        text: (machine|credits_string)
+    expire: 2s
+  not_enough_credits_slide:
+    widgets:
+      - type: text
+        text: (machine|credits_string)
+        color: green
+        anchor_y: bottom
+        y: bottom+1
+      - type: text
+        text: INSERT COINS
+    expire: 2s
+  enabling_free_play_slide:
+    widgets:
+      - type: text
+        text: ENABLING FREE PLAY
+    expire: 2s
+  enabling_credit_play_slide:
+    widgets:
+      - type: text
+        text: ENABLING CREDIT PLAY
+      - type: text
+        text: (machine|credits_string)
+        anchor_y: bottom
+        y: bottom+1
+    expire: 2s

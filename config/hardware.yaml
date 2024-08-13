@@ -206,6 +206,11 @@ switches:
   s_outlane_right:
     number: 3208-28
     tags: playfield_active, outlane
+  # Credits
+  #s_insert_coin:
+    #number: cab-5
+  #s_service_credit:
+    #number: cab-6
 
 coils:
   # Flipper
@@ -287,6 +292,7 @@ coils:
   c_mini_playfield_plunger:
     number: 1616-4
     default_pulse_ms: 2
+
 
 drop_targets:
   d_top_1:

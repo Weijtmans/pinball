@@ -1,28 +1,61 @@
 events:
-  game_ended: 21
-  game_started: 245
+  game_ended: 22
+  game_started: 256
 missing_switches:
-  s_bumper_right: 1
-  s_bumper_top: 112
-  s_flipper_left_eos: 187
-  s_flipper_right_eos: 187
-  s_inlane_right: 179
+  s_bumper_middle: 11
+  s_bumper_right: 12
+  s_bumper_top: 123
+  s_drop_target_left1: 11
+  s_drop_target_left2: 11
+  s_drop_target_left3: 11
+  s_drop_target_right1: 11
+  s_drop_target_right2: 11
+  s_drop_target_right3: 11
+  s_drop_target_top1: 11
+  s_drop_target_top2: 11
+  s_drop_target_top3: 2
+  s_drop_target_top4: 11
+  s_drop_target_top5: 11
+  s_flipper_left_eos: 198
+  s_flipper_right_eos: 198
+  s_inlane_left: 11
+  s_inlane_right: 190
+  s_insert_coin: 5
+  s_launch: 2
   s_launch_button: 1
-  s_left_flipper: 80
-  s_outlane_left: 171
-  s_outlane_right: 158
-  s_right_flipper: 183
-  s_target_middle: 1
-  s_target_right: 1
-  s_trough4: 182
-  s_trough5: 187
-  s_trough6: 187
-  s_trough_jam: 187
-  s_upper_flipper_left_eos: 187
-  s_upper_flipper_right_eos: 187
+  s_left_flipper: 2
+  s_middle_kickout: 11
+  s_mini_playfield_switch1: 11
+  s_mini_playfield_switch2: 11
+  s_mini_playfield_switch3: 11
+  s_mini_playfield_switch4: 11
+  s_orbit1: 11
+  s_orbit2: 11
+  s_outlane_left: 182
+  s_outlane_right: 169
+  s_plunger_lane_exit: 2
+  s_right_flipper: 194
+  s_service_credit: 5
+  s_slingshot_left: 7
+  s_slingshot_right: 7
+  s_start: 2
+  s_target_middle: 12
+  s_target_right: 12
+  s_target_top: 7
+  s_trough1: 2
+  s_trough2: 11
+  s_trough3: 11
+  s_trough4: 193
+  s_trough5: 198
+  s_trough6: 198
+  s_trough_jam: 198
+  s_upper_flipper_left_eos: 198
+  s_upper_flipper_right_eos: 198
+  s_upper_kickout: 11
+  s_upper_slingshot_right: 7
 player:
   score:
-    average: 931
+    average: 875
     top:
     - 14000
     - 2000
@@ -32,9 +65,9 @@ player:
     - 300
     - 300
     - 300
-    - 250
-    - 200
-    total: 21
+    - 300
+    - 300
+    total: 23
 shots:
   bumper_middle: 10
   drop_1: 3
@@ -52,7 +85,7 @@ shots:
   mini_game_4: 19
   right_inlane: 2
   right_target: 3
-  top_target: 19
+  top_target: 20
 switches:
   s_bumper_middle: 28
   s_bumper_right: 15
@@ -65,16 +98,17 @@ switches:
   s_drop_target_right3: 18
   s_drop_target_top1: 171
   s_drop_target_top2: 158
-  s_drop_target_top3: 230
+  s_drop_target_top3: 241
   s_drop_target_top4: 147
   s_drop_target_top5: 159
   s_flipper_left_eos: 397
   s_flipper_right_eos: 490
   s_inlane_left: 45
   s_inlane_right: 8
-  s_launch: 253
+  s_insert_coin: 0
+  s_launch: 264
   s_launch_button: 130
-  s_left_flipper: 744
+  s_left_flipper: 746
   s_middle_kickout: 100
   s_mini_playfield_switch1: 17
   s_mini_playfield_switch2: 20
@@ -84,16 +118,17 @@ switches:
   s_orbit2: 43
   s_outlane_left: 9
   s_outlane_right: 10
-  s_plunger_lane: 423
-  s_plunger_lane_exit: 376
+  s_plunger_lane: 441
+  s_plunger_lane_exit: 389
   s_right_flipper: 743
-  s_slingshot_left: 105
-  s_slingshot_right: 107
-  s_start: 87
+  s_service_credit: 0
+  s_slingshot_left: 108
+  s_slingshot_right: 110
+  s_start: 97
   s_target_middle: 73
   s_target_right: 31
-  s_target_top: 76
-  s_trough1: 223
+  s_target_top: 77
+  s_trough1: 232
   s_trough2: 114
   s_trough3: 87
   s_trough4: 71
@@ -103,4 +138,4 @@ switches:
   s_upper_flipper_left_eos: 337
   s_upper_flipper_right_eos: 424
   s_upper_kickout: 97
-  s_upper_slingshot_right: 115
+  s_upper_slingshot_right: 116

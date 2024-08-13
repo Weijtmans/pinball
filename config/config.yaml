@@ -6,12 +6,14 @@ config:
   - display.yaml
   - lights.yaml
   - audio.yaml
+  - credits.yaml
 
 modes:
   - base
   - orbit
   - multiball
   - drop_target
+  #- credits
 
 game:
   balls_per_game: 3
