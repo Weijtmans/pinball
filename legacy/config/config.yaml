@@ -1,9 +1,0 @@
-#config_version=5
-
-config:
-  - hardware.yaml
-  - keyboard.yaml
-  - display.yaml
-
-modes:
-  - base
