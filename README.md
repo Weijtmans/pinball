@@ -1,100 +1,94 @@
 # Pinball Project
 
-## Commands
+This project is a custom pinball machine implementation using the Mission Pinball Framework (MPF).
 
-- **Activate the Virtual Environment:**
-  ```bash
-  source pinball2/bin/activate
-  ```
-  This command activates the virtual environment for your project.
+## Autostart Setup
 
-- **Start MPF Engine and Media Controller:**
+The project is configured to automatically start the pinball software on boot. Here's how it works:
+
+1. A startup script (`/home/Weijtmans/start_pinball.sh`) is created to set up the environment and run MPF.
+2. The system is configured to auto-login to the Weijtmans user account.
+3. The `.bash_profile` is modified to run the startup script on login.
+
+### Changing the Startup Command
+
+To change the MPF startup command (e.g., from `mpf both -X -V` to `mpf both`):
+
+1. Edit the startup script:
+   ```bash
+   nano /home/Weijtmans/start_pinball.sh
+   ```
+2. Find the line that runs MPF (near the bottom of the file) and modify it as needed:
+   ```bash
+   mpf both  # Remove -X -V or add other options as needed
+   ```
+3. Save the file and exit the editor.
+4. Reboot the system for changes to take effect:
+   ```bash
+   sudo reboot
+   ```
+
+## Manual Operation
+
+If you need to run MPF manually or use different commands, here are some useful operations:
+
+### Activate the Virtual Environment
+
+```bash
+pyenv activate 3.9.18/envs/mpf
+```
+
+### MPF Commands
+
+- Start MPF Engine and Media Controller:
   ```bash
   mpf both
   ```
-  Starts both the MPF engine and media controller at the same time.
 
-- **Verbose Logging:**
+- Verbose Logging:
   ```bash
   mpf both -V
   ```
-  Use `-V` for verbose logging to the console.
 
-- **Virtual Testing:**
+- Virtual Testing (ignore hardware):
   ```bash
   mpf both -X
   ```
-  Use `-X` to ignore hardware and platform settings, useful for virtual testing using smart virtual.
 
-- **Ignore Media Controller:**
+- Ignore Media Controller:
   ```bash
   mpf both -b
   ```
-  Use `-b` to ignore the media controller.
 
-- **Debug Mode:**
+- Debug Mode:
   ```bash
   mpf -t -b
   ```
-  Use this command to debug, which runs MPF in test mode and ignores the media controller.
 
-- **Standard Startup Command:**
-  ```bash
-  mpf both -V
-  ```
-  This is your go-to command to start MPF with verbose logging.
+## Development Roadmap
 
-## Running MPF at Boot
+- [ ] Implement Lights
+- [ ] Design and integrate Artwork
+- [ ] Develop High Score system
+- [ ] Implement Tilt mechanism
+- [ ] Create Bonus scoring system
+- [ ] Develop Service mode
+- [ ] Design and implement game Modes
+- [ ] Integrate Magnets
 
-To run `mpf both -X -V` automatically at boot, follow these steps:
+## Troubleshooting
 
-1. **Create a Script:**
-   - File: `/usr/local/bin/run_mpf.sh`
-   - Content:
-     ```bash
-     #!/bin/bash
-     mpf both -X -V
-     ```
-   - Make it executable:
-     ```bash
-     sudo chmod +x /usr/local/bin/run_mpf.sh
-     ```
+If you encounter issues with the autostart:
 
-2. **Create a Systemd Service:**
-   - File: `/etc/systemd/system/run-mpf.service`
-   - Content:
-     ```bash
-     [Unit]
-     Description=Run MPF Command at Boot
-
-     [Service]
-     ExecStart=/usr/local/bin/run_mpf.sh
-     Restart=always
-     User=root
-
-     [Install]
-     WantedBy=multi-user.target
-     ```
-   - Enable and start the service:
-     ```bash
-     sudo systemctl enable run-mpf.service
-     sudo systemctl start run-mpf.service
-     ```
-
-3. **Updating the Command:**
-   - To update the boot command, edit `/usr/local/bin/run_mpf.sh`.
-   - Restart the service after updating:
-     ```bash
-     sudo systemctl restart run-mpf.service
-     ```
-
-## Todo
-
-- Lights
-- Artwork
-- High score
-- Tilt
-- Bonus
-- Service mode
-- Modes
-- Magnets
+1. Check the system logs:
+   ```bash
+   journalctl -b
+   ```
+2. Verify the contents of the startup script:
+   ```bash
+   cat /home/Weijtmans/start_pinball.sh
+   ```
+3. Ensure the script is executable:
+   ```bash
+   ls -l /home/Weijtmans/start_pinball.sh
+   ```
