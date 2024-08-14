@@ -2,6 +2,48 @@
 
 This project is a custom pinball machine implementation using the Mission Pinball Framework (MPF).
 
+## Manual Operation
+
+If you need to run MPF manually or use different commands, here are some useful operations:
+
+### MPF Commands
+
+- Start MPF Engine and Media Controller:
+  ```bash
+  mpf both
+  ```
+
+- Verbose Logging:
+  ```bash
+  mpf both -V
+  ```
+
+- Virtual Testing (ignore hardware):
+  ```bash
+  mpf both -X
+  ```
+
+- Ignore Media Controller:
+  ```bash
+  mpf both -b
+  ```
+
+- Debug Mode:
+  ```bash
+  mpf -t -b
+  ```
+
+## Development Roadmap
+
+- [ ] Implement Lights
+- [ ] Design and integrate Artwork
+- [ ] Develop High Score system
+- [ ] Implement Tilt mechanism
+- [ ] Create Bonus scoring system
+- [ ] Develop Service mode
+- [ ] Design and implement game Modes
+- [ ] Integrate Magnets
+
 ## Setup on the RPi
 
 1. A startup script (`/home/Weijtmans/start_pinball.sh`) is created to set up the environment and run MPF.
@@ -48,45 +90,3 @@ If you encounter issues with the autostart:
    ```bash
    ls -l /home/Weijtmans/start_pinball.sh
    ```
-
-## Manual Operation
-
-If you need to run MPF manually or use different commands, here are some useful operations:
-
-### MPF Commands
-
-- Start MPF Engine and Media Controller:
-  ```bash
-  mpf both
-  ```
-
-- Verbose Logging:
-  ```bash
-  mpf both -V
-  ```
-
-- Virtual Testing (ignore hardware):
-  ```bash
-  mpf both -X
-  ```
-
-- Ignore Media Controller:
-  ```bash
-  mpf both -b
-  ```
-
-- Debug Mode:
-  ```bash
-  mpf -t -b
-  ```
-
-## Development Roadmap
-
-- [ ] Implement Lights
-- [ ] Design and integrate Artwork
-- [ ] Develop High Score system
-- [ ] Implement Tilt mechanism
-- [ ] Create Bonus scoring system
-- [ ] Develop Service mode
-- [ ] Design and implement game Modes
-- [ ] Integrate Magnets
