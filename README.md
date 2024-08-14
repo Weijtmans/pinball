@@ -2,9 +2,7 @@
 
 This project is a custom pinball machine implementation using the Mission Pinball Framework (MPF).
 
-## Autostart Setup
-
-The project is configured to automatically start the pinball software on boot. Here's how it works:
+## Setup on the RPi
 
 1. A startup script (`/home/Weijtmans/start_pinball.sh`) is created to set up the environment and run MPF.
 2. The system is configured to auto-login to the Weijtmans user account.
@@ -28,15 +26,32 @@ To change the MPF startup command (e.g., from `mpf both -X -V` to `mpf both`):
    sudo reboot
    ```
 
-## Manual Operation
-
-If you need to run MPF manually or use different commands, here are some useful operations:
-
 ### Activate the Virtual Environment
 
 ```bash
 pyenv activate 3.9.18/envs/mpf
 ```
+
+### Troubleshooting
+
+If you encounter issues with the autostart:
+
+1. Check the system logs:
+   ```bash
+   journalctl -b
+   ```
+2. Verify the contents of the startup script:
+   ```bash
+   cat /home/Weijtmans/start_pinball.sh
+   ```
+3. Ensure the script is executable:
+   ```bash
+   ls -l /home/Weijtmans/start_pinball.sh
+   ```
+
+## Manual Operation
+
+If you need to run MPF manually or use different commands, here are some useful operations:
 
 ### MPF Commands
 
@@ -75,20 +90,3 @@ pyenv activate 3.9.18/envs/mpf
 - [ ] Develop Service mode
 - [ ] Design and implement game Modes
 - [ ] Integrate Magnets
-
-## Troubleshooting
-
-If you encounter issues with the autostart:
-
-1. Check the system logs:
-   ```bash
-   journalctl -b
-   ```
-2. Verify the contents of the startup script:
-   ```bash
-   cat /home/Weijtmans/start_pinball.sh
-   ```
-3. Ensure the script is executable:
-   ```bash
-   ls -l /home/Weijtmans/start_pinball.sh
-   ```
