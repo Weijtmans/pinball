@@ -15,3 +15,10 @@ window:
   fullscreen: false
   exit_on_escape: true
   source_display: window
+  effects:
+    - type: color_dmd
+      dots_x: 512
+      dots_y: 156
+      blur: 0
+      background_color: 000000ff
+      gain: 1.2

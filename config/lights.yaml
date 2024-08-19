@@ -2,7 +2,7 @@
   # NOTE: The numbering starts from 1 in the code and 0 on the drawing
 
 light_settings:
-  default_fade_ms: 40
+  default_fade_ms: 100
 
 lights:
   # Lower playfield
