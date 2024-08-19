@@ -21,4 +21,4 @@ window:
       dots_y: 156
       blur: 0
       background_color: 000000ff
-      gain: 1.2
+      # gain: 1.2
