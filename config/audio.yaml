@@ -15,7 +15,7 @@ sound_system:
     sfx:
       type: standard
       simultaneous_sounds: 8
-      volume: 0.4
+      volume: 0.5
       preload: true
 
 assets:

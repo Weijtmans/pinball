@@ -152,10 +152,12 @@ sound_player:
   mode_base_started:
     shoot_the_ball:
       loops: 0
+    waves:
+      loops: 0
 
   # Background music
   sw_launch_active:
-    base_background_music:
+    waikiki:
       loops: -1
 
   # Sound (voice) for hitting various shots
@@ -167,7 +169,7 @@ sound_player:
   ball_ending:
     that_happens:
       loops: 0
-    base_background_music:
+    waikiki:
       action: stop
   
   # Sound (voice) when completing a combo
@@ -185,6 +187,10 @@ sound_player:
   ball_save_default_saving_ball:
     oof_that_was_close:
       loops: 0
+  
+  mode_base_ended:
+    waves:
+      action: stop
 
 # Visuals for base mode
 slide_player:
@@ -304,12 +310,13 @@ slides:
     y: top-25
   - type: text
     text: (player2|score)
+    style: text_small
     anchor_y: top
     anchor_x: right
     halign: right
     number_grouping: true
     min_digits: 2
-    x: right+50
+    x: right-50
     y: top-25
   - type: text
     text: (player3|score)
@@ -351,7 +358,7 @@ slides:
     halign: right
     number_grouping: true
     min_digits: 2
-    x: right+50
+    x: right-50
     y: top-25
   - type: text
     text: (player3|score)
