@@ -372,33 +372,33 @@ flippers:
     hold_coil: c_flipper_left_hold
     activation_switch: s_left_flipper
     eos_switch: s_flipper_left_eos
-    repulse_on_eos_open: true
-    eos_active_ms_before_repulse: 500
-    enable_events: machine_reset_phase_3
+    #repulse_on_eos_open: true
+    #eos_active_ms_before_repulse: 500
+    #enable_events: machine_reset_phase_3
   f_right_flipper:
     main_coil: c_flipper_right_main
     hold_coil: c_flipper_right_hold
     activation_switch: s_right_flipper
-    eos_switch: s_flipper_right_eos
-    repulse_on_eos_open: true
-    eos_active_ms_before_repulse: 500
-    enable_events: machine_reset_phase_3
+    #eos_switch: s_flipper_right_eos
+    #repulse_on_eos_open: true
+    #eos_active_ms_before_repulse: 500
+    #enable_events: machine_reset_phase_3
   f_upper_flipper_left:
     main_coil: c_upper_flipper_left_main
     hold_coil: c_upper_flipper_left_hold
     activation_switch:  s_upper_flipper_left
     eos_switch: s_upper_flipper_left_eos
-    repulse_on_eos_open: true
-    eos_active_ms_before_repulse: 500
-    enable_events: machine_reset_phase_3
+    #repulse_on_eos_open: true
+    #eos_active_ms_before_repulse: 500
+    #enable_events: machine_reset_phase_3
   f_upper_flipper_right:
     main_coil: c_upper_flipper_right_main
     hold_coil: c_upper_flipper_right_hold
     activation_switch: s_upper_flipper_right
     eos_switch: s_upper_flipper_right_eos
-    repulse_on_eos_open: true
-    eos_active_ms_before_repulse: 500
-    enable_events: machine_reset_phase_3
+    #repulse_on_eos_open: true
+    #eos_active_ms_before_repulse: 500
+    #enable_events: machine_reset_phase_3
 
 ball_devices:
   # Trough
