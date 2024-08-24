@@ -2,6 +2,18 @@ credit_units:
   expire: null
   expire_secs: null
   value: 0
+fast_audio_headphones_volume:
+  expire: null
+  expire_secs: null
+  value: 10
+fast_audio_main_volume:
+  expire: null
+  expire_secs: null
+  value: 40
+fast_audio_sub_volume:
+  expire: null
+  expire_secs: null
+  value: 40
 free_play:
   expire: null
   expire_secs: null
@@ -13,8 +25,4 @@ master_volume:
 player1_score:
   expire: null
   expire_secs: null
-  value: 300
-player2_score:
-  expire: null
-  expire_secs: null
-  value: 300
+  value: 13600

@@ -5,7 +5,7 @@ sound_system:
     music:
       type: standard
       simultaneous_sounds: 1
-      volume: 0.5
+      volume: 0.7
       preload: true
     voice:
       type: standard
@@ -15,7 +15,7 @@ sound_system:
     sfx:
       type: standard
       simultaneous_sounds: 8
-      volume: 0.5
+      volume: 0.7
       preload: true
 
 assets:

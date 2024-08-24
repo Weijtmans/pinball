@@ -25,7 +25,11 @@ fast:
       leds:
         model: FP-EXP-0071
         led_hz: 30
-        led_fade_time: 100ms
+        led_fade_time: 200ms
+      neuron:
+        model: FP-EXP-2000
+        led_hz: 30
+        led_fade_time: 200ms
   
   aud:
     port: auto
@@ -39,15 +43,15 @@ fast:
     sub_steps: 20
     headphones_steps: 20
 
-    default_main_volume: 40
+    default_main_volume: 150
     default_sub_volume: 40
     default_headphones_volume: 10
 
     persist_volume_settings: true
 
-    max_hw_volume_main: 63
-    max_hw_volume_sub: 63
-    max_hw_volume_headphones: 63
+    max_hw_volume_main: 150
+    max_hw_volume_sub: 100
+    max_hw_volume_headphones: 60
 
     main_levels_list: None
     sub_levels_list: None
@@ -66,27 +70,36 @@ playfields:
 
 switches:
   s_start:
-    number: cab-2
+    number: cab-10
     tags: start
   s_launch:
-    number: cab-3
+    number: cab-18
     tags: launch
   # Flippers
   s_left_flipper:
-    number: cab-0
+    number: cab-8
     tags: left_flipper
+    type: NC
   s_flipper_left_eos:
     number: 3208-24
   s_right_flipper:
-    number: cab-4
+    number: cab-16
     tags: right_flipper
+    type: NC
   s_flipper_right_eos:
     number: 3208-25
+  s_upper_flipper_left:
+    number: cab-9
+    tags: upper_flipper_left
   s_upper_flipper_left_eos:
     number: 3208-8
-    tags: upper_flipper
+    tags: upper_flipper_left
+  s_upper_flipper_right:
+    number: cab-17
+    tags: upper_flipper_right
   s_upper_flipper_right_eos:
     number: 3208-9
+    tags: upper_flipper_right
   # Trough
   s_trough1:
     number: 3208-0
@@ -266,22 +279,22 @@ coils:
   # Drop targets
   c_drop_target_top_down:
     number: 1616-8
-    default_pulse_ms: 20
+    default_pulse_ms: 35
   c_drop_target_top1:
     number: 1616-13
-    default_pulse_ms: 10
+    default_pulse_ms: 15
   c_drop_target_top2:
     number: 1616-12
-    default_pulse_ms: 10
+    default_pulse_ms: 15
   c_drop_target_top3:
     number: 1616-11
-    default_pulse_ms: 10
+    default_pulse_ms: 15
   c_drop_target_top4:
     number: 1616-10
-    default_pulse_ms: 10
+    default_pulse_ms: 15
   c_drop_target_top5:
     number: 1616-9
-    default_pulse_ms: 10
+    default_pulse_ms: 15
   c_drop_target_left_reset:
     number: 1616-14
     default_pulse_ms: 20
@@ -373,7 +386,7 @@ flippers:
   f_upper_flipper_left:
     main_coil: c_upper_flipper_left_main
     hold_coil: c_upper_flipper_left_hold
-    activation_switch:  s_left_flipper
+    activation_switch:  s_upper_flipper_left
     eos_switch: s_upper_flipper_left_eos
     repulse_on_eos_open: true
     eos_active_ms_before_repulse: 500
@@ -381,7 +394,7 @@ flippers:
   f_upper_flipper_right:
     main_coil: c_upper_flipper_right_main
     hold_coil: c_upper_flipper_right_hold
-    activation_switch: s_right_flipper
+    activation_switch: s_upper_flipper_right
     eos_switch: s_upper_flipper_right_eos
     repulse_on_eos_open: true
     eos_active_ms_before_repulse: 500

@@ -386,11 +386,11 @@ show_player:
   ball_save_default_timer_start:
     ball_save_show:
       action: play
-      speed: 5
+      speed: 2.5
   ball_save_default_hurry_up:
     ball_save_show:
       action: play
-      speed: 10
+      speed: 5
   ball_save_default_disabled:
     ball_save_show:
       action: stop
