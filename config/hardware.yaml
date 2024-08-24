@@ -43,13 +43,13 @@ fast:
     sub_steps: 20
     headphones_steps: 20
 
-    default_main_volume: 150
+    default_main_volume: 100
     default_sub_volume: 40
     default_headphones_volume: 10
 
     persist_volume_settings: true
 
-    max_hw_volume_main: 150
+    max_hw_volume_main: 100
     max_hw_volume_sub: 100
     max_hw_volume_headphones: 60
 
@@ -418,7 +418,7 @@ ball_devices:
     confirm_eject_type: switch
     confirm_eject_switch: s_plunger_lane_exit
     eject_timeouts: 3s
-    mechanical_eject: true
+    # mechanical_eject: true
   # Scoops
   bd_middle_kickout:
     eject_coil: c_middle_kickout
