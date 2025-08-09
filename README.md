@@ -154,7 +154,7 @@ The machine runs on a Raspberry Pi with automatic startup:
 
 Edit the startup script to change MPF parameters:
 ```bash
-nano /home/Weijtmans/start_pinball.sh
+nano /home/[user]/start_pinball.sh
 ```
 
 ## 🛠️ Development Roadmap
