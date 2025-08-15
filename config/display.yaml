@@ -2,18 +2,18 @@
 
 displays:
   window:
-    width: 1280
-    height: 390
+    width: 1920
+    height: 1080
     default: true
 
 window:
-  width: 1280
-  height: 390
+  width: 1920
+  height: 1080
   title: Tiki Retreat
   resizable: true
-  borderless: false
-  fullscreen: false
-  exit_on_escape: true
+  borderless: true
+  fullscreen: true
+  exit_on_escape: false
   source_display: window
   effects:
     - type: color_dmd
