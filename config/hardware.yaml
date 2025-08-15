@@ -277,24 +277,25 @@ coils:
     number: 1616-6
     default_pulse_ms: 25
   # Drop targets
+  # Top bank - Down is actually up (see drop target mode)
   c_drop_target_top_down:
     number: 1616-8
     default_pulse_ms: 35
   c_drop_target_top1:
     number: 1616-13
-    default_pulse_ms: 15
+    default_pulse_ms: 25
   c_drop_target_top2:
     number: 1616-12
-    default_pulse_ms: 15
+    default_pulse_ms: 25
   c_drop_target_top3:
     number: 1616-11
-    default_pulse_ms: 15
+    default_pulse_ms: 25
   c_drop_target_top4:
     number: 1616-10
-    default_pulse_ms: 15
+    default_pulse_ms: 25
   c_drop_target_top5:
     number: 1616-9
-    default_pulse_ms: 15
+    default_pulse_ms: 25
   c_drop_target_left_reset:
     number: 1616-14
     default_pulse_ms: 20
